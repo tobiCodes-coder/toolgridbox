@@ -29,10 +29,10 @@ export function renderHome() {
         <h3>Image compressor</h3>
         <p>Compress images in-browser</p>
       </a>
-      <a href="/tools/color-picker/color-picker.html" class="tool-card">
-        <i class="icon">CLR</i>
-        <h3>Color picker</h3>
-        <p>Pick and convert colors</p>
+      <a href="/src/tools/text-diff/text-diff.html" class="tool-card">
+        <i class="icon">DIFF</i>
+        <h3>Text diff highlighter</h3>
+        <p>Compare two texts and see differences</p>
       </a>
     </div>
   `;

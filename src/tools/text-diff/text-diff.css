@@ -1,0 +1,78 @@
+.tool-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tool-container h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tool-container p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.diff-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.diff-inputs textarea {
+  width: 100%;
+  height: 180px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+#compareBtn {
+  padding: 10px 24px;
+  background: #185fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#compareBtn:hover {
+  background: #0c447c;
+}
+
+.diff-result {
+  margin-top: 24px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  min-height: 60px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.diff-added {
+  background: #d4f7d4;
+  color: #1a7a1a;
+}
+
+.diff-removed {
+  background: #f7d4d4;
+  color: #a71a1a;
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  .diff-inputs {
+    grid-template-columns: 1fr;
+  }
+}

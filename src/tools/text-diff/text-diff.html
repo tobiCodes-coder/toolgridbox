@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Diff Highlighter — Compare Text Online | ToolGrid</title>
+  <meta name="description" content="Compare two texts and instantly see the differences highlighted. Free online text diff tool, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./text-diff.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <main class="tool-container">
+    <h1>Text Diff Highlighter</h1>
+    <p>Paste two texts below to see the differences.</p>
+
+    <div class="diff-inputs">
+      <textarea id="text1" placeholder="Original text..."></textarea>
+      <textarea id="text2" placeholder="Changed text..."></textarea>
+    </div>
+
+    <button id="compareBtn">Compare</button>
+
+    <div id="result" class="diff-result"></div>
+  </main>
+
+  <script type="module" src="./text-diff.js"></script>
+</body>
+</html>

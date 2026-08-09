@@ -1,0 +1,101 @@
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.search {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.cat {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cat.active {
+  background: #185fa5;
+  color: white;
+  border-color: #185fa5;
+}
+
+.cat:hover {
+  transform: translateY(-2px);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 0 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tool-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.tool-card .icon {
+  font-size: 20px;
+  font-style: normal;
+  color: #185fa5;
+}
+
+.tool-card h3 {
+  font-size: 15px;
+  margin: 10px 0 4px;
+}
+
+.tool-card p {
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 22px; }
+  .tool-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+
+@media (max-width: 400px) {
+  .tool-grid { grid-template-columns: 1fr; }
+}

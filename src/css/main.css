@@ -1,0 +1,15 @@
+@import url('../components/header/header.css');
+@import url('../components/footer/footer.css');
+@import url('../pages/home/home.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}

@@ -1,0 +1,38 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.site-header nav a:hover {
+  color: #185fa5;
+}
+
+@media (max-width: 500px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-header nav {
+    gap: 14px;
+  }
+}

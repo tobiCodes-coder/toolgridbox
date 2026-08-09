@@ -10,6 +10,11 @@ const toolsContent = `
         <h3>Text diff highlighter</h3>
         <p>Compare two texts and see differences</p>
       </a>
+      <a href="/src/tools/qr-generator/qr-generator.html" class="tool-card">
+        <i class="icon">QR</i>
+        <h3>QR generator</h3>
+        <p>Create QR codes instantly</p>
+      </a>
     </div>
   </section>
 `;

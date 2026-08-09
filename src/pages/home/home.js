@@ -19,7 +19,7 @@ export function renderHome() {
         <h3>JSON formatter</h3>
         <p>Format and validate JSON</p>
       </a>
-      <a href="/tools/qr-generator/qr-generator.html" class="tool-card">
+      <a href="/src/tools/qr-generator/qr-generator.html" class="tool-card">
         <i class="icon">QR</i>
         <h3>QR generator</h3>
         <p>Create QR codes instantly</p>

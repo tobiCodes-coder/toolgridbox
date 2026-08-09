@@ -1,0 +1,16 @@
+.tools-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tools-page h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.tools-page .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}

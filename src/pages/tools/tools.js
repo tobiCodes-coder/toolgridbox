@@ -40,6 +40,11 @@ const toolsContent = `
         <h3>CSS gradient generator</h3>
         <p>Build linear and radial gradients visually</p>
       </a>
+      <a href="/src/tools/algorithm-visualizer/algorithm-visualizer.html" class="tool-card">
+        <i class="icon">ALG</i>
+        <h3>Algorithm visualizer</h3>
+        <p>Watch sorting algorithms in action</p>
+      </a>
     </div>
   </section>
 `;

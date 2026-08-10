@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm Visualizer — Sorting Algorithms | ToolGrid</title>
+  <meta name="description" content="Watch bubble sort, selection sort, insertion sort, and quick sort in action. Interactive step-by-step visualization. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./algorithm-visualizer.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <main class="tool-container">
+    <h1>Algorithm visualizer</h1>
+    <p>Watch how sorting algorithms work, step by step.</p>
+
+    <div class="controls-row">
+      <label class="option">
+        Algorithm
+        <select id="algoSelect">
+          <option value="bubble">Bubble sort</option>
+          <option value="selection">Selection sort</option>
+          <option value="insertion">Insertion sort</option>
+          <option value="quick">Quick sort</option>
+        </select>
+      </label>
+
+      <label class="option">
+        Array size: <span id="sizeValue">30</span>
+        <input type="range" id="sizeRange" min="10" max="80" value="30" />
+      </label>
+
+      <label class="option">
+        Speed
+        <select id="speedSelect">
+          <option value="200">Slow</option>
+          <option value="60" selected>Normal</option>
+          <option value="10">Fast</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="action-row">
+      <button id="newArrayBtn" class="secondary">New array</button>
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" class="secondary" disabled>Stop</button>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="vizCanvas" width="800" height="360"></canvas>
+    </div>
+
+    <div class="legend">
+      <span><i class="dot default"></i> Unsorted</span>
+      <span><i class="dot comparing"></i> Comparing</span>
+      <span><i class="dot sorted"></i> Sorted</span>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./algorithm-visualizer.js"></script>
+</body>
+</html>

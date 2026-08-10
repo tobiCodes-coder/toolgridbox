@@ -20,6 +20,11 @@ const toolsContent = `
         <h3>Image compressor</h3>
         <p>Compress and resize images in-browser</p>
       </a>
+      <a href="/src/tools/json-formatter/json-formatter.html" class="tool-card">
+        <i class="icon">{ }</i>
+        <h3>JSON formatter</h3>
+        <p>Format, validate, and minify JSON</p>
+      </a>
     </div>
   </section>
 `;

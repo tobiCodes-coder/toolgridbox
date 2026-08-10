@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON Formatter & Validator — Free Online Tool | ToolGrid</title>
+  <meta name="description" content="Format, validate, and minify JSON online. Instant error detection with line numbers. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./json-formatter.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <main class="tool-container">
+    <h1>JSON formatter & validator</h1>
+    <p>Paste JSON below to format, validate, or minify it.</p>
+
+    <div class="editor-grid">
+      <div class="editor-col">
+        <div class="col-header">
+          <span>Input</span>
+          <div class="col-actions">
+            <button id="sampleBtn" class="link-btn">Load sample</button>
+            <button id="clearBtn" class="link-btn">Clear</button>
+          </div>
+        </div>
+        <textarea id="jsonInput" placeholder="Paste your JSON here..." spellcheck="false"></textarea>
+      </div>
+
+      <div class="editor-col">
+        <div class="col-header">
+          <span>Output</span>
+          <div class="col-actions">
+            <button id="copyBtn" class="link-btn">Copy</button>
+          </div>
+        </div>
+        <pre id="jsonOutput" class="json-output"></pre>
+      </div>
+    </div>
+
+    <div id="errorBox" class="error-box" style="display:none;"></div>
+
+    <div class="action-row">
+      <button id="formatBtn">Format</button>
+      <button id="minifyBtn" class="secondary">Minify</button>
+      <label class="indent-label">
+        Indent
+        <select id="indentSelect">
+          <option value="2">2 spaces</option>
+          <option value="4">4 spaces</option>
+          <option value="tab">Tab</option>
+        </select>
+      </label>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./json-formatter.js"></script>
+</body>
+</html>

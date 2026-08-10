@@ -14,10 +14,10 @@ export function renderHome() {
     </div>
 
     <div class="tool-grid">
-      <a href="/tools/json-formatter/json-formatter.html" class="tool-card">
+      <a href="/src/tools/json-formatter/json-formatter.html" class="tool-card">
         <i class="icon">{ }</i>
         <h3>JSON formatter</h3>
-        <p>Format and validate JSON</p>
+        <p>Format, validate, and minify JSON</p>
       </a>
       <a href="/src/tools/qr-generator/qr-generator.html" class="tool-card">
         <i class="icon">QR</i>

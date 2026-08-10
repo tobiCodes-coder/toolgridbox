@@ -14,3 +14,10 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
 }
+
+.no-tools {
+  color: #999;
+  text-align: center;
+  padding: 40px 20px;
+  grid-column: 1 / -1;
+}

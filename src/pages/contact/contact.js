@@ -9,4 +9,8 @@ const contactContent = `
   </section>
 `;
 
-document.querySelector('#app').innerHTML = renderHeader() + contactContent + renderFooter();
+document.querySelector('#app').innerHTML = `
+  ${renderHeader()}
+  <div class="page-content">${contactContent}</div>
+  ${renderFooter()}
+`;

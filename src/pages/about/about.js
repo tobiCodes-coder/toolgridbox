@@ -9,4 +9,8 @@ const aboutContent = `
   </section>
 `;
 
-document.querySelector('#app').innerHTML = renderHeader() + aboutContent + renderFooter();
+document.querySelector('#app').innerHTML = `
+  ${renderHeader()}
+  <div class="page-content">${aboutContent}</div>
+  ${renderFooter()}
+`;

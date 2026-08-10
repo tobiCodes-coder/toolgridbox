@@ -49,4 +49,8 @@ const toolsContent = `
   </section>
 `;
 
-document.querySelector('#app').innerHTML = renderHeader() + toolsContent + renderFooter();
+document.querySelector('#app').innerHTML = `
+  ${renderHeader()}
+  <div class="page-content">${toolsContent}</div>
+  ${renderFooter()}
+`;

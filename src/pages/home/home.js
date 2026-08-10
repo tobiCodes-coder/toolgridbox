@@ -1,5 +1,6 @@
 export function renderHome() {
   return `
+  <div class='page-content'>
     <section class="hero">
       <h1>Free online tools for developers</h1>
       <p>100+ fast, simple tools. No signup required.</p>
@@ -54,6 +55,7 @@ export function renderHome() {
         <h3>Algorithm visualizer</h3>
         <p>Watch sorting algorithms in action</p>
       </a>
+    </div>
     </div>
   `;
 }

@@ -13,7 +13,7 @@ const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];
 
 function renderCards(filtered) {
   if (filtered.length === 0) {
-    return '<p class="no-tools">No tools in this category yet.</p>';
+    return '<p class="no-tools">No tools found.</p>';
   }
 
   return filtered.map(tool => `
@@ -48,6 +48,24 @@ export function renderHome() {
 export function initHomeEvents() {
   const categoryBar = document.querySelector('#categoryBar');
   const toolGrid = document.querySelector('#toolGrid');
+  const searchInput = document.querySelector('.search');
+
+  let activeCategory = 'All';
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+
+    let filtered = activeCategory === 'All' ? tools : tools.filter(t => t.category === activeCategory);
+
+    if (query) {
+      filtered = filtered.filter(t =>
+        t.name.toLowerCase().includes(query) ||
+        t.desc.toLowerCase().includes(query)
+      );
+    }
+
+    toolGrid.innerHTML = renderCards(filtered);
+  }
 
   categoryBar.addEventListener('click', (e) => {
     if (!e.target.classList.contains('cat')) return;
@@ -55,8 +73,9 @@ export function initHomeEvents() {
     categoryBar.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
     e.target.classList.add('active');
 
-    const selected = e.target.dataset.cat;
-    const filtered = selected === 'All' ? tools : tools.filter(t => t.category === selected);
-    toolGrid.innerHTML = renderCards(filtered);
+    activeCategory = e.target.dataset.cat;
+    applyFilters();
   });
+
+  searchInput.addEventListener('input', applyFilters);
 }

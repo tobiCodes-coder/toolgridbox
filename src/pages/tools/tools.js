@@ -30,6 +30,16 @@ const toolsContent = `
         <h3>Encode, decode & hash</h3>
         <p>Base64, URL, and hash conversion</p>
       </a>
+      <a href="/src/tools/data-visualizer/data-visualizer.html" class="tool-card">
+        <i class="icon">CHT</i>
+        <h3>Data visualizer</h3>
+        <p>Turn your data into bar, line, or pie charts</p>
+      </a>
+      <a href="/src/tools/gradient-generator/gradient-generator.html" class="tool-card">
+        <i class="icon">GRD</i>
+        <h3>CSS gradient generator</h3>
+        <p>Build linear and radial gradients visually</p>
+      </a>
     </div>
   </section>
 `;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Gradient Generator — Free Online Tool | ToolGrid</title>
+  <meta name="description" content="Create linear and radial CSS gradients visually. Add color stops, adjust angle, and copy the generated CSS instantly. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./gradient-generator.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <main class="tool-container">
+    <h1>CSS gradient generator</h1>
+    <p>Build a gradient visually and copy the CSS.</p>
+
+    <div id="preview" class="preview-box"></div>
+
+    <div class="options-row">
+      <label class="option">
+        Type
+        <select id="typeSelect">
+          <option value="linear">Linear</option>
+          <option value="radial">Radial</option>
+        </select>
+      </label>
+
+      <label class="option" id="angleOption">
+        Angle: <span id="angleValue">90</span>&deg;
+        <input type="range" id="angleRange" min="0" max="360" value="90" />
+      </label>
+    </div>
+
+    <div id="stopsList" class="stops-list"></div>
+
+    <button id="addStopBtn" class="link-btn">+ Add color stop</button>
+
+    <div class="action-row">
+      <button id="copyBtn">Copy CSS</button>
+    </div>
+
+    <pre id="cssOutput" class="css-output"></pre>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./gradient-generator.js"></script>
+</body>
+</html>

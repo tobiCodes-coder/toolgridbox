@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Visualizer — Create Charts Online | ToolGrid</title>
+  <meta name="description" content="Turn your data into bar, line, or pie charts instantly. Paste CSV or enter values manually. Free, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./data-visualizer.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <main class="tool-container">
+    <h1>Data visualizer</h1>
+    <p>Enter data as label,value pairs (one per line) to generate a chart.</p>
+
+    <textarea id="dataInput" placeholder="Jan,45&#10;Feb,60&#10;Mar,38&#10;Apr,72"></textarea>
+
+    <div class="options-row">
+      <label class="option">
+        Chart type
+        <select id="chartType">
+          <option value="bar">Bar</option>
+          <option value="line">Line</option>
+          <option value="pie">Pie</option>
+        </select>
+      </label>
+
+      <label class="option">
+        Color
+        <input type="color" id="chartColor" value="#185fa5" />
+      </label>
+
+      <button id="sampleBtn" class="link-btn">Load sample</button>
+    </div>
+
+    <div class="action-row">
+      <button id="generateBtn">Generate chart</button>
+      <button id="downloadBtn" class="secondary" style="display:none;">Download PNG</button>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="chartCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./data-visualizer.js"></script>
+</body>
+</html>

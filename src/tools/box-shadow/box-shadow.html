@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Shadow Generator — Free Online Tool | ToolGrid</title>
+  <meta name="description" content="Create multi-layer CSS box shadows visually. Adjust offset, blur, spread, and color, then copy the CSS instantly. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./box-shadow.css" />
+</head>
+<body>
+
+  <main class="tool-container">
+    <h1>Box shadow generator</h1>
+    <p>Build multi-layer box shadows visually and copy the CSS.</p>
+
+    <div class="preview-wrap">
+      <div id="previewBox" class="preview-box"></div>
+    </div>
+
+    <div id="layersList" class="layers-list"></div>
+
+    <button id="addLayerBtn" class="link-btn">+ Add shadow layer</button>
+
+    <div class="action-row">
+      <button id="copyBtn">Copy CSS</button>
+    </div>
+
+    <pre id="cssOutput" class="css-output"></pre>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./box-shadow.js"></script>
+</body>
+</html>

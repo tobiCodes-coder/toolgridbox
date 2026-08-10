@@ -1,12 +1,12 @@
 const tools = [
   { name: 'Text diff highlighter', desc: 'Compare two texts and see differences', icon: 'DIFF', url: '/src/tools/text-diff/text-diff.html', category: 'Text' },
-  { name: 'QR generator', desc: 'Create QR codes instantly', icon: 'QR', url: '/src/tools/generator/qr-generator.html', category: 'Developer' },
+  { name: 'QR generator', desc: 'Create QR codes instantly', icon: 'QR', url: '/src/tools/qr-generator/qr-generator.html', category: 'Developer' },
   { name: 'Image compressor', desc: 'Compress and resize images in-browser', icon: 'IMG', url: '/src/tools/image-compressor/image-compressor.html', category: 'Image' },
   { name: 'JSON formatter', desc: 'Format, validate, and minify JSON', icon: '{ }', url: '/src/tools/json-formatter/json-formatter.html', category: 'Developer' },
-  { name: 'Encode, decode & hash', desc: 'Base64, URL, and hash conversion', icon: 'DEC', url: '/src/tools/converter/converter.html', category: 'Developer' },
   { name: 'Data visualizer', desc: 'Turn your data into bar, line, or pie charts', icon: 'CHT', url: '/src/tools/data-visualizer/data-visualizer.html', category: 'Developer' },
   { name: 'CSS gradient generator', desc: 'Build linear and radial gradients visually', icon: 'GRD', url: '/src/tools/gradient-generator/gradient-generator.html', category: 'Design' },
-  { name: 'Algorithm visualizer', desc: 'Watch sorting algorithms in action', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html', category: 'Developer' }
+  { name: 'Algorithm visualizer', desc: 'Watch sorting algorithms in action', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html', category: 'Developer' },
+  { name: 'Box shadow generator', desc: 'Build multi-layer CSS box shadows visually', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html', category: 'Design' }
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

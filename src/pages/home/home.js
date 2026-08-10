@@ -34,6 +34,11 @@ export function renderHome() {
         <h3>Text diff highlighter</h3>
         <p>Compare two texts and see differences</p>
       </a>
+      <a href="/src/tools/converter/converter.html" class="tool-card">
+        <i class="icon">DEC</i>
+        <h3>Encode, decode & hash</h3>
+        <p>Base64, URL, and hash conversion</p>
+      </a>
     </div>
   `;
 }

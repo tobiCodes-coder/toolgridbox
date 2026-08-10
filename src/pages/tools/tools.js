@@ -25,6 +25,11 @@ const toolsContent = `
         <h3>JSON formatter</h3>
         <p>Format, validate, and minify JSON</p>
       </a>
+      <a href="/src/tools/converter/converter.html" class="tool-card">
+        <i class="icon">DEC</i>
+        <h3>Encode, decode & hash</h3>
+        <p>Base64, URL, and hash conversion</p>
+      </a>
     </div>
   </section>
 `;

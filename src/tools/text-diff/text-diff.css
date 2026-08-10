@@ -1,5 +1,5 @@
 .tool-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -11,14 +11,41 @@
 
 .tool-container p {
   color: #666;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .diff-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.input-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #185fa5;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
 }
 
 .diff-inputs textarea {
@@ -32,8 +59,16 @@
   resize: vertical;
 }
 
-#compareBtn {
-  padding: 10px 24px;
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.action-row button {
+  padding: 10px 22px;
   background: #185fa5;
   color: white;
   border: none;
@@ -43,12 +78,51 @@
   transition: background 0.2s ease;
 }
 
-#compareBtn:hover {
+.action-row button:hover {
   background: #0c447c;
 }
 
+.action-row button.secondary {
+  background: white;
+  color: #185fa5;
+  border: 1px solid #185fa5;
+}
+
+.action-row button.secondary:hover {
+  background: #f0f6fc;
+}
+
+.mode-label {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mode-label select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.stat.added {
+  color: #1a7a1a;
+}
+
+.stat.removed {
+  color: #a71a1a;
+}
+
 .diff-result {
-  margin-top: 24px;
   padding: 16px;
   background: white;
   border: 1px solid #eee;
@@ -56,8 +130,9 @@
   min-height: 60px;
   font-family: monospace;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .diff-added {
@@ -71,7 +146,7 @@
   text-decoration: line-through;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .diff-inputs {
     grid-template-columns: 1fr;
   }

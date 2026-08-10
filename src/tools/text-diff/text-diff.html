@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Text Diff Highlighter — Compare Text Online | ToolGrid</title>
-  <meta name="description" content="Compare two texts and instantly see the differences highlighted. Free online text diff tool, no signup required." />
+  <title>Text Diff Checker — Compare Text Online | ToolGrid</title>
+  <meta name="description" content="Compare two texts word by word, character by character, or line by line. See additions and deletions highlighted instantly. Free, no signup." />
   <link rel="stylesheet" href="/src/css/main.css" />
   <link rel="stylesheet" href="./text-diff.css" />
 </head>
@@ -12,15 +12,45 @@
   <div id="app"></div>
 
   <main class="tool-container">
-    <h1>Text Diff Highlighter</h1>
-    <p>Paste two texts below to see the differences.</p>
+    <h1>Text diff checker</h1>
+    <p>Paste two texts below to see what changed.</p>
 
     <div class="diff-inputs">
-      <textarea id="text1" placeholder="Original text..."></textarea>
-      <textarea id="text2" placeholder="Changed text..."></textarea>
+      <div class="input-col">
+        <div class="col-header">
+          <span>Original</span>
+          <button id="sampleBtn" class="link-btn">Load sample</button>
+        </div>
+        <textarea id="text1" placeholder="Original text..."></textarea>
+      </div>
+      <div class="input-col">
+        <div class="col-header">
+          <span>Changed</span>
+          <button id="clearBtn" class="link-btn">Clear both</button>
+        </div>
+        <textarea id="text2" placeholder="Changed text..."></textarea>
+      </div>
     </div>
 
-    <button id="compareBtn">Compare</button>
+    <div class="action-row">
+      <button id="compareBtn">Compare</button>
+
+      <label class="mode-label">
+        Compare by
+        <select id="modeSelect">
+          <option value="word">Word</option>
+          <option value="char">Character</option>
+          <option value="line">Line</option>
+        </select>
+      </label>
+
+      <button id="copyBtn" class="secondary" style="display:none;">Copy result</button>
+    </div>
+
+    <div id="statsRow" class="stats-row" style="display:none;">
+      <span class="stat added">+<span id="addedCount">0</span> added</span>
+      <span class="stat removed">-<span id="removedCount">0</span> removed</span>
+    </div>
 
     <div id="result" class="diff-result"></div>
   </main>

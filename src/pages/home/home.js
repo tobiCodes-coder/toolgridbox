@@ -24,10 +24,10 @@ export function renderHome() {
         <h3>QR generator</h3>
         <p>Create QR codes instantly</p>
       </a>
-      <a href="/tools/image-compressor/image-compressor.html" class="tool-card">
+      <a href="/src/tools/image-compressor/image-compressor.html" class="tool-card">
         <i class="icon">IMG</i>
         <h3>Image compressor</h3>
-        <p>Compress images in-browser</p>
+        <p>Compress and resize images in-browser</p>
       </a>
       <a href="/src/tools/text-diff/text-diff.html" class="tool-card">
         <i class="icon">DIFF</i>

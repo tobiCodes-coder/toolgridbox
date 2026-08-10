@@ -15,6 +15,11 @@ const toolsContent = `
         <h3>QR generator</h3>
         <p>Create QR codes instantly</p>
       </a>
+      <a href="/src/tools/image-compressor/image-compressor.html" class="tool-card">
+        <i class="icon">IMG</i>
+        <h3>Image compressor</h3>
+        <p>Compress and resize images in-browser</p>
+      </a>
     </div>
   </section>
 `;

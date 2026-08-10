@@ -1,0 +1,146 @@
+.tool-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tool-container h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tool-container p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 50px 20px;
+  cursor: pointer;
+  color: #888;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: #185fa5;
+  background: #f0f6fc;
+}
+
+.editor-area {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #555;
+  min-width: 140px;
+}
+
+.option input,
+.option select {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.compare-box {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.compare-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.compare-box img {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.size-label {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #888;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.action-row button {
+  padding: 10px 22px;
+  background: #185fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.action-row button:hover {
+  background: #0c447c;
+}
+
+.action-row button.secondary {
+  background: white;
+  color: #185fa5;
+  border: 1px solid #185fa5;
+}
+
+.action-row button.secondary:hover {
+  background: #f0f6fc;
+}
+
+.status-msg {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+}

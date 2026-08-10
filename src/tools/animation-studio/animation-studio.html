@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Animation Studio — Visual Animation Builder | ToolGrid</title>
+  <meta name="description" content="Build CSS animations visually — no code required. Adjust position, scale, rotation, timing, and export ready-to-use CSS. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./animation-studio.css" />
+</head>
+<body>
+  <main class="tool-container studio">
+    <h1>CSS Animation Studio</h1>
+    <p>Build CSS animations visually. Adjust the controls, watch the live preview, and copy the generated CSS.</p>
+
+    <div class="studio-layout">
+      <!-- LEFT: Elements + Controls -->
+      <div class="studio-panel">
+
+        <section class="panel-block">
+          <div class="panel-block-header">
+            <span>Elements</span>
+            <button id="addElBtn" class="link-btn">+ Add element</button>
+          </div>
+          <div id="elementList" class="element-list"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-block-header"><span>Transform</span></div>
+          <div class="control-grid">
+            <label class="control">Position X <span id="xVal">0px</span>
+              <input type="range" id="ctrlX" min="-200" max="200" value="0" />
+            </label>
+            <label class="control">Position Y <span id="yVal">0px</span>
+              <input type="range" id="ctrlY" min="-200" max="200" value="0" />
+            </label>
+            <label class="control">Scale <span id="scaleVal">1</span>
+              <input type="range" id="ctrlScale" min="0" max="3" step="0.05" value="1" />
+            </label>
+            <label class="control">Rotate <span id="rotateVal">0deg</span>
+              <input type="range" id="ctrlRotate" min="-360" max="360" value="0" />
+            </label>
+            <label class="control">Skew X <span id="skewXVal">0deg</span>
+              <input type="range" id="ctrlSkewX" min="-60" max="60" value="0" />
+            </label>
+            <label class="control">Skew Y <span id="skewYVal">0deg</span>
+              <input type="range" id="ctrlSkewY" min="-60" max="60" value="0" />
+            </label>
+            <label class="control">Transform origin
+              <select id="ctrlOrigin">
+                <option value="50% 50%">Center</option>
+                <option value="0% 0%">Top left</option>
+                <option value="100% 0%">Top right</option>
+                <option value="0% 100%">Bottom left</option>
+                <option value="100% 100%">Bottom right</option>
+                <option value="50% 0%">Top center</option>
+                <option value="50% 100%">Bottom center</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-block-header"><span>Appearance</span></div>
+          <div class="control-grid">
+            <label class="control">Opacity <span id="opacityVal">1</span>
+              <input type="range" id="ctrlOpacity" min="0" max="1" step="0.05" value="1" />
+            </label>
+            <label class="control">Border radius <span id="radiusVal">8%</span>
+              <input type="range" id="ctrlRadius" min="0" max="50" value="8" />
+            </label>
+            <label class="control">Background color
+              <input type="color" id="ctrlColor" value="#185fa5" />
+            </label>
+          </div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-block-header"><span>Timing</span></div>
+          <div class="control-grid">
+            <label class="control">Duration (s) <span id="durationVal">1s</span>
+              <input type="range" id="ctrlDuration" min="0.1" max="10" step="0.1" value="1" />
+            </label>
+            <label class="control">Delay (s) <span id="delayVal">0s</span>
+              <input type="range" id="ctrlDelay" min="0" max="5" step="0.1" value="0" />
+            </label>
+            <label class="control">Timing function
+              <select id="ctrlTiming">
+                <option value="ease">ease</option>
+                <option value="linear">linear</option>
+                <option value="ease-in">ease-in</option>
+                <option value="ease-out">ease-out</option>
+                <option value="ease-in-out">ease-in-out</option>
+              </select>
+            </label>
+            <label class="control">Direction
+              <select id="ctrlDirection">
+                <option value="normal">normal</option>
+                <option value="reverse">reverse</option>
+                <option value="alternate">alternate</option>
+                <option value="alternate-reverse">alternate-reverse</option>
+              </select>
+            </label>
+            <label class="control">Fill mode
+              <select id="ctrlFill">
+                <option value="none">none</option>
+                <option value="forwards" selected>forwards</option>
+                <option value="backwards">backwards</option>
+                <option value="both">both</option>
+              </select>
+            </label>
+            <label class="control checkbox-control">
+              <input type="checkbox" id="ctrlInfinite" checked />
+              Infinite loop
+            </label>
+            <label class="control" id="iterationWrap" style="display:none;">Repeat count <span id="iterationVal">1</span>
+              <input type="range" id="ctrlIteration" min="1" max="20" value="1" />
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT: Preview + Output -->
+      <div class="studio-preview-col">
+        <section class="panel-block preview-block">
+          <div class="panel-block-header">
+            <span>Live preview</span>
+            <button id="restartBtn" class="link-btn">Restart</button>
+          </div>
+          <div id="previewStage" class="preview-stage"></div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-block-header">
+            <span>Generated CSS</span>
+            <button id="copyCssBtn" class="link-btn">Copy CSS</button>
+          </div>
+          <pre id="cssOutput" class="code-output"></pre>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-block-header">
+            <span>HTML example</span>
+            <button id="copyHtmlBtn" class="link-btn">Copy HTML</button>
+          </div>
+          <pre id="htmlOutput" class="code-output"></pre>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <style id="dynamicKeyframes"></style>
+  <script type="module" src="./animation-studio.js"></script>
+</body>
+</html>

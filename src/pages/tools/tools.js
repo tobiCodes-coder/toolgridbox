@@ -10,7 +10,8 @@ const tools = [
   { name: 'Data visualizer', desc: 'Turn your data into bar, line, or pie charts', icon: 'CHT', url: '/src/tools/data-visualizer/data-visualizer.html', category: 'Developer' },
   { name: 'CSS gradient generator', desc: 'Build linear and radial gradients visually', icon: 'GRD', url: '/src/tools/gradient-generator/gradient-generator.html', category: 'Design' },
   { name: 'Algorithm visualizer', desc: 'Watch sorting algorithms in action', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html', category: 'Developer' },
-  { name: 'Box shadow generator', desc: 'Build multi-layer CSS box shadows visually', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html', category: 'Design' }
+  { name: 'Box shadow generator', desc: 'Build multi-layer CSS box shadows visually', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html', category: 'Design' },
+  { name: "CSS Animation Studio", desc: "Create CSS animations visually with live preview", icon: "ANI", url: "/src/tools/animation-studio/animation-studio.html", category: "Design" },
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

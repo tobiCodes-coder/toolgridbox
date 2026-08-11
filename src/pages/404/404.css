@@ -1,0 +1,36 @@
+.notfound-page {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.notfound-page h1 {
+  font-size: 72px;
+  color: #185fa5;
+  margin-bottom: 8px;
+}
+
+.notfound-page h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.notfound-page p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.notfound-page a {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #185fa5;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.notfound-page a:hover {
+  background: #0c447c;
+}

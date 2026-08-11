@@ -1,6 +1,7 @@
 @import url('../components/header/header.css');
 @import url('../components/footer/footer.css');
 @import url('../pages/home/home.css');
+@import url('./tool-base.css');
 
 * {
   margin: 0;

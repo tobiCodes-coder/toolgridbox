@@ -27,3 +27,15 @@ html, body {
 .page-content {
   flex: 1;
 }
+
+.back-home {
+  display: inline-block;
+  margin: 20px;
+  font-size: 13px;
+  color: #185fa5;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}

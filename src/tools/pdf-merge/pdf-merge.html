@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Merge Tool | Combine PDF Files Online</title>
+  <meta name="description" content="Merge multiple PDF files into one document directly in your browser. Fast, secure, free, and completely private with no uploads or registration." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-merge.css" />
+</head>
+<body>
+  <main class="tool-container">
+    <h1>PDF merge</h1>
+    <p>Combine multiple PDFs into one file, right in your browser. Nothing is uploaded anywhere.</p>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop PDF files here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" multiple hidden />
+    </div>
+
+    <div id="fileListWrap" class="file-list-wrap" style="display:none;">
+      <div id="fileList" class="file-list"></div>
+
+      <div class="action-row">
+        <button id="mergeBtn">Merge PDFs</button>
+        <button id="resetBtn" class="secondary">Start over</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <div id="downloadArea" class="download-area" style="display:none;">
+        <button id="downloadBtn">Download merged PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-merge.js"></script>
+</body>
+</html>

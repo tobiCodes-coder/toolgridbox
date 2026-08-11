@@ -1,0 +1,145 @@
+.tool-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tool-container h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tool-container p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: #185fa5;
+  background: #f0f6fc;
+}
+
+.file-list-wrap {
+  margin-top: 24px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: grab;
+}
+
+.file-row.dragging {
+  opacity: 0.5;
+}
+
+.file-order {
+  font-size: 13px;
+  font-weight: 600;
+  color: #185fa5;
+  width: 20px;
+}
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: 11px;
+  color: #999;
+}
+
+.file-remove {
+  background: none;
+  border: none;
+  color: #a71a1a;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.action-row button {
+  padding: 10px 22px;
+  background: #185fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.action-row button:hover:not(:disabled) {
+  background: #0c447c;
+}
+
+.action-row button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-row button.secondary {
+  background: white;
+  color: #185fa5;
+  border: 1px solid #185fa5;
+}
+
+.action-row button.secondary:hover {
+  background: #f0f6fc;
+}
+
+.status-msg {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.download-area button {
+  padding: 10px 22px;
+  background: #2f8a2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.download-area button:hover {
+  background: #226b22;
+}

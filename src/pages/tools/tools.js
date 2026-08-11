@@ -12,7 +12,8 @@ const tools = [
   { name: 'Algorithm visualizer', desc: 'Watch sorting algorithms in action', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html', category: 'Developer' },
   { name: 'Box shadow generator', desc: 'Build multi-layer CSS box shadows visually', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html', category: 'Design' },
   { name: "CSS Animation Studio", desc: "Create CSS animations visually with live preview", icon: "ANI", url: "/src/tools/animation-studio/animation-studio.html", category: "Design" },
-  { name: 'Color accessibility studio', desc: 'Check contrast, preview UI, simulate color blindness', icon: 'A11Y', url: '/src/tools/color-accessibility/color-accessibility.html', category: 'Design' }
+  { name: 'Color accessibility studio', desc: 'Check contrast, preview UI, simulate color blindness', icon: 'A11Y', url: '/src/tools/color-accessibility/color-accessibility.html', category: 'Design' },
+  { name: 'PDF merge', desc: 'Combine multiple PDFs into one file', icon: 'PDF', url: '/src/tools/pdf-merge/pdf-merge.html', category: 'PDF' }
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

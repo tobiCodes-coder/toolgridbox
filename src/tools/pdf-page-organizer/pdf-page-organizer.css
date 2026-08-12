@@ -1,0 +1,144 @@
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: #185fa5;
+  background: #f0f6fc;
+}
+
+.editor-area {
+  margin-top: 24px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.toolbar button {
+  padding: 9px 18px;
+  background: white;
+  color: #185fa5;
+  border: 1px solid #185fa5;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #f0f6fc;
+}
+
+.toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-msg {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 14px;
+  min-height: 18px;
+}
+
+.status-msg.error {
+  color: #a71a1a;
+}
+
+.status-msg.success {
+  color: #1a7a3c;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+.page-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.page-card.dragging {
+  opacity: 0.4;
+}
+
+.page-card.drag-over {
+  border-color: #185fa5;
+  box-shadow: 0 0 0 2px #185fa5;
+}
+
+.thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #f2f2f2;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.15s ease;
+}
+
+.page-label {
+  font-size: 10px;
+  color: #777;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.page-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.page-actions button {
+  background: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 11px;
+  padding: 3px 8px;
+  cursor: pointer;
+  color: #555;
+}
+
+.page-actions button:hover {
+  background: #eef4fb;
+  color: #185fa5;
+}
+
+.page-order-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: #185fa5;
+  color: white;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 10px;
+}

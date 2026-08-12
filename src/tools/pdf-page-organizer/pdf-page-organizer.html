@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Page Organizer | Merge, Reorder & Delete PDF Pages Online</title>
+  <meta name="description" content="Combine multiple PDFs, drag to reorder pages, rotate or delete pages, and export a single PDF — directly in your browser. Free, fast, and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-page-organizer.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>PDF page organizer</h1>
+    <p>Combine PDFs, drag to reorder pages, rotate or delete pages, and export one file. Nothing leaves your browser.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload one or more PDF files — all their pages will appear below as thumbnails. Drag pages to reorder them, use the rotate/delete buttons on each page, then click "Export PDF" to download the combined result.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop PDF files here, or click to select (multiple files allowed)</p>
+      <input type="file" id="fileInput" accept="application/pdf" multiple hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <div class="toolbar">
+        <button id="addMoreBtn" class="secondary">+ Add more files</button>
+        <button id="exportBtn" class="secondary">Export PDF</button>
+        <button id="clearBtn" class="secondary">Clear all</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <div id="pageGrid" class="page-grid"></div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-page-organizer.js"></script>
+</body>
+</html>

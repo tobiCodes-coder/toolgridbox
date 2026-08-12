@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Rotate Tool | Rotate PDF Pages Online</title>
+  <meta name="description" content="Rotate PDF pages 90, 180, or 270 degrees directly in your browser. Free, fast, and private — no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-rotate.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>PDF rotate</h1>
+    <p>Rotate all pages in a PDF and download the result.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload a PDF file, choose a rotation angle (90, 180, or 270 degrees), then click Rotate PDF and download the result.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop a PDF file here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <div class="angle-row">
+        <label class="angle-option">
+          <input type="radio" name="angle" value="90" checked />
+          90°
+        </label>
+        <label class="angle-option">
+          <input type="radio" name="angle" value="180" />
+          180°
+        </label>
+        <label class="angle-option">
+          <input type="radio" name="angle" value="270" />
+          270°
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="rotateBtn">Rotate PDF</button>
+        <button id="resetBtn" class="secondary">Choose another file</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <div id="downloadArea" class="download-area" style="display:none;">
+        <button id="downloadBtn">Download rotated PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-rotate.js"></script>
+</body>
+</html>

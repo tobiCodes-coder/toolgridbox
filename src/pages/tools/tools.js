@@ -21,6 +21,7 @@ const tools = [
   { name: 'PDF text extractor', desc: 'Extract all text from a PDF file', icon: 'TXT', url: '/src/tools/pdf-text-extractor/pdf-text-extractor.html', category: 'PDF' },
   { name: 'PDF password protect', desc: 'Add a password to a PDF file, right in your browser', icon: 'PDF', url: '/src/tools/pdf-password-protect/pdf-password-protect.html', category: 'PDF' },
   { name: 'PDF page number adder', desc: 'Add page numbers to a PDF file, right in your browser', icon: 'PDF', url: '/src/tools/pdf-page-numbers/pdf-page-numbers.html', category: 'PDF' },
+  { name: 'PDF metadata editor', desc: 'View and edit a PDF\'s title, author, and document info', icon: 'PDF', url: '/src/tools/pdf-metadata-editor/pdf-metadata-editor.html', category: 'PDF' },
   
 ];
 

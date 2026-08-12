@@ -1,3 +1,5 @@
+import { showToast } from '/src/js/toast.js';
+
 const text1El = document.querySelector('#text1');
 const text2El = document.querySelector('#text2');
 const compareBtn = document.querySelector('#compareBtn');
@@ -103,7 +105,17 @@ copyBtn.addEventListener('click', async () => {
   const text = resultDiv.innerText;
   try {
     await navigator.clipboard.writeText(text);
+    showToast('Copied to clipboard');
   } catch (err) {
-    // ignore
+    showToast('Copy failed');
   }
+});
+
+[text1El, text2El].forEach(el => {
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      compareTexts();
+    }
+  });
 });

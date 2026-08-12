@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Watermark Tool | Add Text Watermark to PDF Online</title>
+  <meta name="description" content="Add a custom text watermark to your PDF directly in your browser. Adjust text, opacity, and position. Free, fast, and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-watermark.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>PDF watermark</h1>
+    <p>Add a custom text watermark to every page of your PDF.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload a PDF, type the watermark text, adjust size and opacity, then click Add Watermark and download the result.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop a PDF file here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <label class="field">
+        Watermark text
+        <input type="text" id="watermarkText" value="CONFIDENTIAL" />
+      </label>
+
+      <div class="options-row">
+        <label class="option">
+          Font size: <span id="fontSizeValue">40</span>
+          <input type="range" id="fontSizeRange" min="12" max="100" value="40" />
+        </label>
+        <label class="option">
+          Opacity: <span id="opacityValue">30</span>%
+          <input type="range" id="opacityRange" min="5" max="100" value="30" />
+        </label>
+        <label class="option">
+          Color
+          <input type="color" id="colorPicker" value="#a71a1a" />
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="watermarkBtn">Add watermark</button>
+        <button id="resetBtn" class="secondary">Choose another file</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <div id="downloadArea" class="download-area" style="display:none;">
+        <button id="downloadBtn">Download watermarked PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-watermark.js"></script>
+</body>
+</html>

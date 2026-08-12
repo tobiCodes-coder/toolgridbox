@@ -16,7 +16,8 @@ const tools = [
   { name: 'PDF merge', desc: 'Combine multiple PDFs into one file', icon: 'PDF', url: '/src/tools/pdf-merge/pdf-merge.html', category: 'PDF' },
   { name: 'PDF split', desc: 'Split a PDF into pages or extract a page range', icon: 'SPL', url: '/src/tools/pdf-split/pdf-split.html', category: 'PDF' },
   { name: 'Images to PDF', desc: 'Combine JPG or PNG images into one PDF', icon: 'IMG2PDF', url: '/src/tools/images-to-pdf/images-to-pdf.html', category: 'PDF' },
-  { name: 'PDF rotate', desc: 'Rotate PDF pages and download the result', icon: 'ROT', url: '/src/tools/pdf-rotate/pdf-rotate.html', category: 'PDF' }
+  { name: 'PDF rotate', desc: 'Rotate PDF pages and download the result', icon: 'ROT', url: '/src/tools/pdf-rotate/pdf-rotate.html', category: 'PDF' },
+  { name: 'PDF watermark', desc: 'Add a custom text watermark to your PDF', icon: 'WM', url: '/src/tools/pdf-watermark/pdf-watermark.html', category: 'PDF' }
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

@@ -14,7 +14,8 @@ const tools = [
   { name: "CSS Animation Studio", desc: "Create CSS animations visually with live preview", icon: "ANI", url: "/src/tools/animation-studio/animation-studio.html", category: "Design" },
   { name: 'Color accessibility studio', desc: 'Check contrast, preview UI, simulate color blindness', icon: 'A11Y', url: '/src/tools/color-accessibility/color-accessibility.html', category: 'Design' },
   { name: 'PDF merge', desc: 'Combine multiple PDFs into one file', icon: 'PDF', url: '/src/tools/pdf-merge/pdf-merge.html', category: 'PDF' },
-  { name: 'PDF split', desc: 'Split a PDF into pages or extract a page range', icon: 'SPL', url: '/src/tools/pdf-split/pdf-split.html', category: 'PDF' }
+  { name: 'PDF split', desc: 'Split a PDF into pages or extract a page range', icon: 'SPL', url: '/src/tools/pdf-split/pdf-split.html', category: 'PDF' },
+  { name: 'Images to PDF', desc: 'Combine JPG or PNG images into one PDF', icon: 'IMG2PDF', url: '/src/tools/images-to-pdf/images-to-pdf.html', category: 'PDF' }
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

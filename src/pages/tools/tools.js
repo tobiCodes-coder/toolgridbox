@@ -20,6 +20,7 @@ const tools = [
   { name: 'PDF watermark', desc: 'Add a custom text watermark to your PDF', icon: 'WM', url: '/src/tools/pdf-watermark/pdf-watermark.html', category: 'PDF' },
   { name: 'PDF text extractor', desc: 'Extract all text from a PDF file', icon: 'TXT', url: '/src/tools/pdf-text-extractor/pdf-text-extractor.html', category: 'PDF' },
   { name: 'PDF password protect', desc: 'Add a password to a PDF file, right in your browser', icon: 'PDF', url: '/src/tools/pdf-password-protect/pdf-password-protect.html', category: 'PDF' },
+  { name: 'PDF page number adder', desc: 'Add page numbers to a PDF file, right in your browser', icon: 'PDF', url: '/src/tools/pdf-page-numbers/pdf-page-numbers.html', category: 'PDF' },
   
 ];
 

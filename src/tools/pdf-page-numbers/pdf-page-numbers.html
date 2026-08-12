@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Page Number Adder | Add Page Numbers to PDF Online</title>
+  <meta name="description" content="Add page numbers to a PDF file directly in your browser. Choose position and format, then download instantly. Free, fast, and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-page-numbers.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>PDF page number adder</h1>
+    <p>Add page numbers to a PDF file. Nothing leaves your browser.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload a PDF, choose where the numbers should appear and how they should look, then click "Add page numbers". A new copy of the file will download automatically — your original file is never modified or uploaded anywhere.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop a PDF file here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <div class="options-form">
+        <label class="field-label">
+          Position
+          <select id="positionSelect">
+            <option value="bottom-center">Bottom center</option>
+            <option value="bottom-right">Bottom right</option>
+            <option value="bottom-left">Bottom left</option>
+            <option value="top-center">Top center</option>
+            <option value="top-right">Top right</option>
+            <option value="top-left">Top left</option>
+          </select>
+        </label>
+
+        <label class="field-label">
+          Format
+          <select id="formatSelect">
+            <option value="number">1, 2, 3…</option>
+            <option value="page-n">Page 1, Page 2…</option>
+            <option value="n-of-total">1 of 10, 2 of 10…</option>
+          </select>
+        </label>
+
+        <label class="field-label">
+          Start number
+          <input type="number" id="startNumberInput" value="1" min="1" />
+        </label>
+
+        <label class="field-label">
+          Font size
+          <input type="number" id="fontSizeInput" value="11" min="6" max="36" />
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="applyBtn" class="secondary">Add page numbers</button>
+        <button id="resetBtn" class="secondary">Choose another file</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-page-numbers.js"></script>
+</body>
+</html>

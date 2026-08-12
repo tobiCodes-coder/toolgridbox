@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Image Resizer | Resize Images Online</title>
+  <meta name="description" content="Resize JPG, PNG, WebP images by pixels, percentage, or social media presets directly in your browser." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./image-resizer.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Image resizer</h1>
+    <p>Resize images for Facebook, Instagram, YouTube, or custom dimensions. Nothing leaves your browser.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload an image, choose a social media preset or set custom dimensions (width & height), adjust format and quality if needed, then click "Download Image". Your original file is never modified or uploaded anywhere.
+      </div>
+    </details>
+
+    <div class="notice-box">
+      ⚠ Keeping "Lock Aspect Ratio" checked prevents your image from stretching or distorting when changing dimensions.
+    </div>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop an image here, or click to select</p>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <div class="resizer-grid">
+        <!-- Controls Column -->
+        <div class="control-panel">
+          
+          <div class="field-group">
+            <label class="field-label">Social Media Presets</label>
+            <select id="presetSelect">
+              <option value="custom">Custom Dimensions</option>
+              <optgroup label="Facebook">
+                <option value="fb-profile">Profile Picture (180x180)</option>
+                <option value="fb-post">Post Image (1200x630)</option>
+                <option value="fb-cover">Cover Photo (820x312)</option>
+                <option value="fb-story">Story / Reel (1080x1920)</option>
+              </optgroup>
+              <optgroup label="Instagram">
+                <option value="ig-profile">Profile Picture (320x320)</option>
+                <option value="ig-square">Square Post (1080x1080)</option>
+                <option value="ig-portrait">Portrait Post (1080x1350)</option>
+                <option value="ig-landscape">Landscape Post (1080x566)</option>
+                <option value="ig-story">Story / Reel (1080x1920)</option>
+              </optgroup>
+              <optgroup label="YouTube">
+                <option value="yt-thumb">Thumbnail (1280x720)</option>
+                <option value="yt-banner">Channel Banner (2560x1440)</option>
+                <option value="yt-profile">Channel Logo (800x800)</option>
+              </optgroup>
+              <optgroup label="LinkedIn">
+                <option value="li-profile">Profile Picture (400x400)</option>
+                <option value="li-banner">Cover Banner (1584x396)</option>
+                <option value="li-post">Post Image (1200x627)</option>
+              </optgroup>
+              <optgroup label="X / Twitter">
+                <option value="tw-profile">Profile Photo (400x400)</option>
+                <option value="tw-header">Header Banner (1500x500)</option>
+                <option value="tw-post">In-Stream Photo (1600x900)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="dimension-inputs">
+            <label class="field-label">
+              Width (px)
+              <input type="number" id="widthInput" placeholder="Width" min="1" />
+            </label>
+            <label class="field-label">
+              Height (px)
+              <input type="number" id="heightInput" placeholder="Height" min="1" />
+            </label>
+          </div>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="aspectRatioToggle" checked /> Lock Aspect Ratio
+          </label>
+
+          <div class="field-group">
+            <label class="field-label">Output Format</label>
+            <select id="formatSelect">
+              <option value="image/jpeg">JPG / JPEG</option>
+              <option value="image/png">PNG</option>
+              <option value="image/webp">WebP</option>
+            </select>
+          </div>
+
+          <div class="field-group" id="qualityGroup">
+            <label class="field-label">Quality: <span id="qualityVal">90%</span></label>
+            <input type="range" id="qualitySlider" min="10" max="100" value="90" />
+          </div>
+
+          <div class="action-row">
+            <button id="downloadBtn" class="secondary">Download Image</button>
+            <button id="resetBtn" class="secondary">Choose another file</button>
+          </div>
+
+          <p id="statusMsg" class="status-msg"></p>
+        </div>
+
+        <!-- Live Preview Column -->
+        <div class="preview-panel">
+          <span class="preview-title">Live Preview</span>
+          <div class="img-preview-container">
+            <img id="imagePreview" alt="Resized Preview" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./image-resizer.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

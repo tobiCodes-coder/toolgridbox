@@ -23,7 +23,10 @@ const tools = [
   { name: 'PDF page number adder', desc: 'Add page numbers to a PDF file, right in your browser', icon: 'PDF', url: '/src/tools/pdf-page-numbers/pdf-page-numbers.html', category: 'PDF' },
   { name: 'PDF metadata editor', desc: 'View and edit a PDF\'s title, author, and document info', icon: 'PDF', url: '/src/tools/pdf-metadata-editor/pdf-metadata-editor.html', category: 'PDF' },
   { name: 'PDF page organizer', desc: 'Merge PDFs, reorder, rotate, and delete pages', icon: 'PDF', url: '/src/tools/pdf-page-organizer/pdf-page-organizer.html', category: 'PDF' },
-  
+  { name: 'Image resizer', desc: 'Resize images by pixels, percentage, or social media presets', icon: 'Image', url: '/src/tools/image-resizer/image-resizer.html', category: 'Image' },
+  { name: 'QR logo generator', desc: 'Generate custom QR codes with your own logo, colors, and shapes', icon: 'QR', url: '/src/tools/qr-logo-generator/qr-logo-generator.html', category: 'Image' },
+  { name: 'Image color extractor', desc: 'Extract design color palette and generate HTML/CSS variables', icon: 'Palette', url: '/src/tools/image-color-extractor/image-color-extractor.html', category: 'Developer' },
+    
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

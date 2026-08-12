@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Color Extractor & CSS Generator</title>
+  <meta name="description" content="Extract color palette from design images and generate ready-to-use CSS color variables." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./image-color-extractor.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Image color extractor</h1>
+    <p>Upload a design image to extract its color palette and generate ready-to-use CSS code. Nothing leaves your browser.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload any design image, UI mockup, or photo. The tool will analyze the image, pull out the dominant colors, and automatically write CSS variables and background classes for your HTML project.
+      </div>
+    </details>
+
+    <div class="notice-box">
+      ⚠ Click on any color card or code block to instantly copy the value to your clipboard.
+    </div>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop design image here, or click to select</p>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <div class="extractor-grid">
+        <!-- Image Preview & Palette -->
+        <div class="left-panel">
+          <span class="panel-title">Source Image & Extracted Colors</span>
+          <div class="img-container">
+            <img id="imagePreview" alt="Design Source" />
+          </div>
+          <div id="paletteBox" class="palette-grid"></div>
+        </div>
+
+        <!-- Generated CSS / HTML -->
+        <div class="right-panel">
+          <span class="panel-title">Generated CSS Variables</span>
+          <div class="code-box-wrapper">
+            <textarea id="cssCodeOutput" readonly rows="12"></textarea>
+            <button id="copyCssBtn" class="secondary">Copy CSS Code</button>
+          </div>
+
+          <span class="panel-title" style="margin-top: 16px;">Quick HTML Example</span>
+          <div class="code-box-wrapper">
+            <textarea id="htmlCodeOutput" readonly rows="8"></textarea>
+            <button id="copyHtmlBtn" class="secondary">Copy HTML Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./image-color-extractor.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

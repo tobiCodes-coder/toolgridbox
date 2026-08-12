@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free QR Logo Generator | Create QR Codes with Custom Logo</title>
+  <meta name="description" content="Generate custom QR codes with embedded logos, custom shapes, and colors directly in your browser. Fast and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./qr-logo-generator.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>QR logo generator</h1>
+    <p>Generate custom QR codes with your own logo image inside. Nothing leaves your browser.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Enter the text or URL you want to encode, upload a logo image, customize its position, shape, size, and colors, then click "Download QR Code".
+      </div>
+    </details>
+
+    <div class="notice-box">
+      ⚠ Keeping the logo size under 25% ensures your QR code remains easy to scan with any phone camera.
+    </div>
+
+    <div class="qr-grid">
+      <!-- Controls Column -->
+      <div class="control-panel">
+        
+        <div class="field-group">
+          <label class="field-label">
+            URL or Text
+            <input type="text" id="qrText" placeholder="https://example.com" value="https://example.com" />
+          </label>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Logo Image (Optional)</label>
+          <div id="dropZone" class="drop-zone">
+            <p id="dropZoneText">Drag & drop logo here, or click to select</p>
+            <input type="file" id="fileInput" accept="image/*" hidden />
+          </div>
+        </div>
+
+        <div class="color-inputs">
+          <div class="field-group">
+            <label class="field-label">Logo Position</label>
+            <select id="logoPosSelect">
+              <option value="center">Center</option>
+              <option value="top-left">Top Left</option>
+              <option value="top-right">Top Right</option>
+              <option value="bottom-left">Bottom Left</option>
+              <option value="bottom-right">Bottom Right</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Logo Shape</label>
+            <select id="logoShapeSelect">
+              <option value="square">Square</option>
+              <option value="circle">Circle</option>
+              <option value="rounded">Rounded</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="color-inputs">
+          <label class="field-label">
+            QR Color
+            <input type="color" id="fgColor" value="#000000" />
+          </label>
+          <label class="field-label">
+            Background
+            <input type="color" id="bgColor" value="#ffffff" />
+          </label>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Logo Size: <span id="logoSizeVal">20%</span></label>
+          <input type="range" id="logoSizeSlider" min="10" max="30" value="20" />
+        </div>
+
+        <div class="action-row">
+          <button id="downloadBtn" class="secondary">Download QR Code</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+        <p id="statusMsg" class="status-msg"></p>
+      </div>
+
+      <!-- Live Preview Column -->
+      <div class="preview-panel">
+        <span class="preview-title">Live Preview</span>
+        <div class="img-preview-container">
+          <canvas id="qrCanvas" style="display:none;"></canvas>
+          <img id="imagePreview" alt="QR Code Preview" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./qr-logo-generator.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

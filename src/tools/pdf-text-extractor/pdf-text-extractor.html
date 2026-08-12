@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Text Extractor | Extract Text from PDF Online</title>
+  <meta name="description" content="Extract all text from a PDF file directly in your browser. Copy or download the extracted text instantly. Free, fast, and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-text-extractor.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>PDF text extractor</h1>
+    <p>Pull all text out of a PDF file.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload a PDF file. The extracted text will appear below — copy it or download it as a .txt file. Works best with text-based PDFs, not scanned images.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop a PDF file here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <div class="action-row">
+        <button id="copyBtn" class="secondary">Copy text</button>
+        <button id="downloadBtn" class="secondary">Download .txt</button>
+        <button id="resetBtn" class="secondary">Choose another file</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <pre id="textOutput" class="text-output"></pre>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script type="module" src="./pdf-text-extractor.js"></script>
+</body>
+</html>

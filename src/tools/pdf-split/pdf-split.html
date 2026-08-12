@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free PDF Split Tool | Split & Extract PDF Pages Online</title>
+  <meta name="description" content="Split a PDF into separate pages or extract a specific page range, directly in your browser. Free, fast, and private." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./pdf-split.css" />
+</head>
+<body>
+
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+ 
+    <h1>PDF split</h1>
+    <p>Split a PDF into individual pages, or extract a specific page range.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload a PDF file. Choose "Split every page" to get each page as a separate PDF, or "Extract range" to pull out specific pages (e.g. 2-5). Then download the result.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop a PDF file here, or click to select</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <p class="file-info-line" id="fileInfoLine"></p>
+
+      <div class="mode-row">
+        <label class="mode-option">
+          <input type="radio" name="splitMode" value="all" checked />
+          Split every page into a separate PDF
+        </label>
+        <label class="mode-option">
+          <input type="radio" name="splitMode" value="range" />
+          Extract a page range
+        </label>
+      </div>
+
+      <div id="rangeInputs" class="range-inputs" style="display:none;">
+        <label>From page <input type="number" id="fromPage" min="1" value="1" /></label>
+        <label>To page <input type="number" id="toPage" min="1" value="1" /></label>
+      </div>
+
+      <div class="action-row">
+        <button id="splitBtn">Split PDF</button>
+        <button id="resetBtn" class="secondary">Choose another file</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+
+      <div id="resultList" class="result-list"></div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="module" src="./pdf-split.js"></script>
+</body>
+</html>

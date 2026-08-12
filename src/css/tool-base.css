@@ -117,3 +117,13 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+.notice-box {
+  background: #fff8e1;
+  border: 1px solid #f0d98c;
+  color: #8a6d1a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}

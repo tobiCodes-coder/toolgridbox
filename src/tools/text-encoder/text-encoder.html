@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to Morse, Binary & ROT13 Converter | Free Online Tool</title>
+  <meta name="description" content="Convert text to Morse code, binary, or ROT13 cipher and back. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./text-encoder.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Text to Morse, Binary & ROT13</h1>
+    <p>Convert text between formats and back.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Pick a format tab, type or paste text in the input box, and click Convert. Use the Decode button to reverse it back to plain text.
+      </div>
+    </details>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="morse">Morse code</button>
+      <button class="tab-btn" data-tab="binary">Binary</button>
+      <button class="tab-btn" data-tab="rot13">ROT13</button>
+    </div>
+
+    <textarea id="textInput" placeholder="Type or paste text here..."></textarea>
+
+    <div class="action-row">
+      <button id="encodeBtn">Convert</button>
+      <button id="decodeBtn" class="secondary">Decode</button>
+      <button id="copyBtn" class="secondary">Copy result</button>
+    </div>
+
+    <pre id="output" class="output-box"></pre>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./text-encoder.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

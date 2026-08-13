@@ -30,6 +30,7 @@ const tools = [
   { name: 'Text to Morse, Binary & ROT13', desc: 'Convert text between Morse code, binary, and ROT13', icon: 'ENC', url: '/src/tools/text-encoder/text-encoder.html', category: 'Text' },
   { name: 'Text cleanup', desc: 'Remove duplicate lines, extra spaces, and empty lines', icon: 'CLN', url: '/src/tools/text-cleanup/text-cleanup.html', category: 'Text' },
   { name: 'URL/email/phone extractor', desc: 'Extract URLs, emails, and phone numbers from text', icon: 'EXT', url: '/src/tools/text-extractor/text-extractor.html', category: 'Text' },
+  { name: 'Image format converter', desc: 'Convert images between JPG, PNG, WebP formats', icon: 'CONV', url: '/src/tools/image-format-converter/image-format-converter.html', category: 'Image' },
   
 ];
 

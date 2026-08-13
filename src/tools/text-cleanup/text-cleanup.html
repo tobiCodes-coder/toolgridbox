@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Text Cleanup Tool | Remove Duplicates & Extra Spaces</title>
+  <meta name="description" content="Remove duplicate lines, extra whitespace, and empty lines from your text instantly. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./text-cleanup.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Text cleanup</h1>
+    <p>Remove duplicate lines, extra spaces, and empty lines from your text.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Paste your text below, choose which cleanup options to apply, then click Clean text. Copy or download the result.
+      </div>
+    </details>
+
+    <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+
+    <div class="options-row">
+      <label class="option-check">
+        <input type="checkbox" id="removeDuplicates" checked />
+        Remove duplicate lines
+      </label>
+      <label class="option-check">
+        <input type="checkbox" id="removeEmptyLines" checked />
+        Remove empty lines
+      </label>
+      <label class="option-check">
+        <input type="checkbox" id="trimSpaces" checked />
+        Trim extra spaces
+      </label>
+    </div>
+
+    <div class="action-row">
+      <button id="cleanBtn">Clean text</button>
+      <button id="copyBtn" class="secondary">Copy result</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+
+    <textarea id="output" class="output-area" readonly placeholder="Cleaned text will appear here..."></textarea>
+  </main>
+
+  <script type="module" src="./text-cleanup.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

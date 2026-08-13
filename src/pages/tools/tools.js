@@ -28,6 +28,7 @@ const tools = [
   { name: 'Image color extractor', desc: 'Extract design color palette and generate HTML/CSS variables', icon: 'Palette', url: '/src/tools/image-color-extractor/image-color-extractor.html', category: 'Developer' },
   { name: 'Word counter', desc: 'Count words, characters, sentences, and reading time', icon: 'WC', url: '/src/tools/word-counter/word-counter.html', category: 'Text' },
   { name: 'Text to Morse, Binary & ROT13', desc: 'Convert text between Morse code, binary, and ROT13', icon: 'ENC', url: '/src/tools/text-encoder/text-encoder.html', category: 'Text' },
+  { name: 'Text cleanup', desc: 'Remove duplicate lines, extra spaces, and empty lines', icon: 'CLN', url: '/src/tools/text-cleanup/text-cleanup.html', category: 'Text' },
   
 ];
 

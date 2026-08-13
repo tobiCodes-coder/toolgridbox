@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL, Email & Phone Extractor | Free Online Tool</title>
+  <meta name="description" content="Extract all URLs, email addresses, and phone numbers from any block of text instantly. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./text-extractor.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>URL, email & phone extractor</h1>
+    <p>Paste any text and pull out URLs, email addresses, and phone numbers.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Paste your text below and click Extract. URLs, emails, and phone numbers found in the text will be listed separately, each with a copy button.
+      </div>
+    </details>
+
+    <textarea id="textInput" placeholder="Paste text containing URLs, emails, or phone numbers..."></textarea>
+
+    <div class="action-row">
+      <button id="extractBtn">Extract</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+
+    <div class="results-grid">
+      <div class="result-section">
+        <div class="result-header">
+          <span>URLs (<span id="urlCount">0</span>)</span>
+          <button class="link-btn" id="copyUrls">Copy all</button>
+        </div>
+        <div id="urlList" class="result-list"></div>
+      </div>
+
+      <div class="result-section">
+        <div class="result-header">
+          <span>Emails (<span id="emailCount">0</span>)</span>
+          <button class="link-btn" id="copyEmails">Copy all</button>
+        </div>
+        <div id="emailList" class="result-list"></div>
+      </div>
+
+      <div class="result-section">
+        <div class="result-header">
+          <span>Phone numbers (<span id="phoneCount">0</span>)</span>
+          <button class="link-btn" id="copyPhones">Copy all</button>
+        </div>
+        <div id="phoneList" class="result-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./text-extractor.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

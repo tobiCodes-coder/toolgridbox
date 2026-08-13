@@ -29,6 +29,7 @@ const tools = [
   { name: 'Word counter', desc: 'Count words, characters, sentences, and reading time', icon: 'WC', url: '/src/tools/word-counter/word-counter.html', category: 'Text' },
   { name: 'Text to Morse, Binary & ROT13', desc: 'Convert text between Morse code, binary, and ROT13', icon: 'ENC', url: '/src/tools/text-encoder/text-encoder.html', category: 'Text' },
   { name: 'Text cleanup', desc: 'Remove duplicate lines, extra spaces, and empty lines', icon: 'CLN', url: '/src/tools/text-cleanup/text-cleanup.html', category: 'Text' },
+  { name: 'URL/email/phone extractor', desc: 'Extract URLs, emails, and phone numbers from text', icon: 'EXT', url: '/src/tools/text-extractor/text-extractor.html', category: 'Text' },
   
 ];
 

@@ -32,7 +32,7 @@ const tools = [
   { name: 'URL/email/phone extractor', desc: 'Extract URLs, emails, and phone numbers from text', icon: 'EXT', url: '/src/tools/text-extractor/text-extractor.html', category: 'Text' },
   { name: 'Image format converter', desc: 'Convert images between JPG, PNG, WebP formats', icon: 'CONV', url: '/src/tools/image-format-converter/image-format-converter.html', category: 'Image' },
   { name: 'Image filter editor', desc: 'Apply filters and adjust brightness, contrast, and more', icon: 'FLT', url: '/src/tools/image-filter/image-filter.html', category: 'Image' },
-  
+  { name: 'Font pairing tool', desc: 'Preview and pair Google Fonts for headings and body text', icon: 'FNT', url: '/src/tools/font-pairing/font-pairing.html', category: 'Design' }
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

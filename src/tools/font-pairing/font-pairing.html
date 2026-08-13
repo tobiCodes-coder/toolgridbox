@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Font Pairing Tool | Preview Google Font Combinations</title>
+  <meta name="description" content="Preview heading and body font pairings from Google Fonts with live text, then copy the CSS. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./font-pairing.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Font pairing tool</h1>
+    <p>Preview heading and body font combinations, then copy the CSS.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Pick a heading font and a body font from the dropdowns, or click Shuffle for a random pairing. Edit the preview text if you like, then copy the CSS.
+      </div>
+    </details>
+
+    <div class="controls-row">
+      <label class="option">
+        Heading font
+        <select id="headingFont"></select>
+      </label>
+      <label class="option">
+        Body font
+        <select id="bodyFont"></select>
+      </label>
+      <button id="shuffleBtn" class="secondary">Shuffle</button>
+    </div>
+
+    <div class="preview-box" id="previewBox">
+      <h2 id="previewHeading" contenteditable="true">The quick brown fox jumps over the lazy dog</h2>
+      <p id="previewBody" contenteditable="true">This is a preview paragraph showing how your body text will look with this font pairing. Edit this text to try your own content and see how it reads in this combination.</p>
+    </div>
+
+    <div class="action-row">
+      <button id="copyBtn">Copy CSS</button>
+    </div>
+
+    <pre id="cssOutput" class="css-output"></pre>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./font-pairing.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

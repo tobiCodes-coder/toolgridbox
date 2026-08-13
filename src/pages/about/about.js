@@ -1,5 +1,6 @@
 import { renderHeader } from '../../components/header/header.js';
 import { renderFooter } from '../../components/footer/footer.js';
+import { tools } from '../../data/tools.js';
 
 const aboutContent = `
   <section class="about-page">
@@ -28,7 +29,7 @@ const aboutContent = `
 
     <div class="about-stats">
       <div class="stat-box">
-        <span class="stat-number">11+</span>
+        <span class="stat-number">${tools.length}+</span>
         <span class="stat-label">Tools</span>
       </div>
       <div class="stat-box">

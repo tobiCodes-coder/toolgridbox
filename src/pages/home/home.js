@@ -30,7 +30,7 @@ export function renderHome() {
     <div class="page-content">
       <section class="hero">
         <h1>Free online tools for developers</h1>
-        <p>100+ fast, simple tools. No signup required.</p>
+        <p>Fast, simple tools. No signup required.</p>
         <input type="text" class="search" placeholder="Search tools..." />
       </section>
 

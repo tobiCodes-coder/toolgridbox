@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Word Counter | Character, Sentence & Reading Time Tool</title>
+  <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. See reading time, keyword density, and more. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./word-counter.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Word counter</h1>
+    <p>Paste or type any amount of text to see detailed stats.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Type or paste your text in the box below. All stats update live — word count, character count, sentences, paragraphs, reading time, and more.
+      </div>
+    </details>
+
+    <textarea id="textInput" placeholder="Start typing or paste your text here..."></textarea>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-number" id="wordCount">0</span>
+        <span class="stat-label">Words</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="charWithSpace">0</span>
+        <span class="stat-label">Characters (with spaces)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="charNoSpace">0</span>
+        <span class="stat-label">Characters (no spaces)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="sentenceCount">0</span>
+        <span class="stat-label">Sentences</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="paragraphCount">0</span>
+        <span class="stat-label">Paragraphs</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="uniqueWordCount">0</span>
+        <span class="stat-label">Unique words</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="readingTime">0 min</span>
+        <span class="stat-label">Reading time</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="speakingTime">0 min</span>
+        <span class="stat-label">Speaking time</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="longestWord">—</span>
+        <span class="stat-label">Longest word</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number" id="avgWordLength">0</span>
+        <span class="stat-label">Avg word length</span>
+      </div>
+    </div>
+
+    <div class="keyword-section">
+      <h2>Top keywords</h2>
+      <div id="keywordList" class="keyword-list">
+        <p class="empty-note">Start typing to see keyword frequency.</p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./word-counter.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

@@ -26,7 +26,8 @@ const tools = [
   { name: 'Image resizer', desc: 'Resize images by pixels, percentage, or social media presets', icon: 'Image', url: '/src/tools/image-resizer/image-resizer.html', category: 'Image' },
   { name: 'QR logo generator', desc: 'Generate custom QR codes with your own logo, colors, and shapes', icon: 'QR', url: '/src/tools/qr-logo-generator/qr-logo-generator.html', category: 'Image' },
   { name: 'Image color extractor', desc: 'Extract design color palette and generate HTML/CSS variables', icon: 'Palette', url: '/src/tools/image-color-extractor/image-color-extractor.html', category: 'Developer' },
-    
+  { name: 'Word counter', desc: 'Count words, characters, sentences, and reading time', icon: 'WC', url: '/src/tools/word-counter/word-counter.html', category: 'Text' },
+  
 ];
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];

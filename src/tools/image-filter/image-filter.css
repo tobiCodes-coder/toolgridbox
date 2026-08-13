@@ -1,0 +1,113 @@
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: #185fa5;
+  background: #f0f6fc;
+}
+
+.editor-area {
+  margin-top: 24px;
+}
+
+.preview-wrap {
+  background: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.preview-img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 6px;
+}
+
+.presets-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.preset-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+.preset-btn:hover,
+.preset-btn.active {
+  border-color: #185fa5;
+  color: #185fa5;
+}
+
+.sliders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.slider-option {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #555;
+  gap: 6px;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.action-row button {
+  padding: 10px 22px;
+  background: #185fa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.action-row button:hover {
+  background: #0c447c;
+}
+
+.action-row button.secondary {
+  background: white;
+  color: #185fa5;
+  border: 1px solid #185fa5;
+}
+
+.action-row button.secondary:hover {
+  background: #f0f6fc;
+}
+
+.status-msg {
+  font-size: 13px;
+  color: #666;
+}

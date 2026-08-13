@@ -31,6 +31,7 @@ const tools = [
   { name: 'Text cleanup', desc: 'Remove duplicate lines, extra spaces, and empty lines', icon: 'CLN', url: '/src/tools/text-cleanup/text-cleanup.html', category: 'Text' },
   { name: 'URL/email/phone extractor', desc: 'Extract URLs, emails, and phone numbers from text', icon: 'EXT', url: '/src/tools/text-extractor/text-extractor.html', category: 'Text' },
   { name: 'Image format converter', desc: 'Convert images between JPG, PNG, WebP formats', icon: 'CONV', url: '/src/tools/image-format-converter/image-format-converter.html', category: 'Image' },
+  { name: 'Image filter editor', desc: 'Apply filters and adjust brightness, contrast, and more', icon: 'FLT', url: '/src/tools/image-filter/image-filter.html', category: 'Image' },
   
 ];
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Image Filter & Editor | Adjust Brightness, Contrast, Filters</title>
+  <meta name="description" content="Apply filters, adjust brightness, contrast, saturation, and blur to your images directly in your browser. Free, fast, no signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./image-filter.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Image filter editor</h1>
+    <p>Adjust and filter your images visually, then download the result.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Upload an image, pick a preset filter or adjust the sliders manually, then click Download to save your edited image.
+      </div>
+    </details>
+
+    <div id="dropZone" class="drop-zone">
+      <p>Drag & drop an image here, or click to select</p>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+    </div>
+
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <div class="preview-wrap">
+        <img id="previewImg" class="preview-img" />
+      </div>
+
+      <div class="presets-row">
+        <button class="preset-btn" data-preset="none">Normal</button>
+        <button class="preset-btn" data-preset="bw">B&W</button>
+        <button class="preset-btn" data-preset="sepia">Sepia</button>
+        <button class="preset-btn" data-preset="vintage">Vintage</button>
+        <button class="preset-btn" data-preset="cool">Cool</button>
+        <button class="preset-btn" data-preset="warm">Warm</button>
+      </div>
+
+      <div class="sliders-grid">
+        <label class="slider-option">Brightness: <span id="brightnessValue">100</span>%
+          <input type="range" id="brightnessRange" min="0" max="200" value="100" />
+        </label>
+        <label class="slider-option">Contrast: <span id="contrastValue">100</span>%
+          <input type="range" id="contrastRange" min="0" max="200" value="100" />
+        </label>
+        <label class="slider-option">Saturation: <span id="saturateValue">100</span>%
+          <input type="range" id="saturateRange" min="0" max="200" value="100" />
+        </label>
+        <label class="slider-option">Blur: <span id="blurValue">0</span>px
+          <input type="range" id="blurRange" min="0" max="10" value="0" />
+        </label>
+        <label class="slider-option">Grayscale: <span id="grayscaleValue">0</span>%
+          <input type="range" id="grayscaleRange" min="0" max="100" value="0" />
+        </label>
+        <label class="slider-option">Sepia: <span id="sepiaValue">0</span>%
+          <input type="range" id="sepiaRange" min="0" max="100" value="0" />
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="downloadBtn">Download image</button>
+        <button id="resetBtn" class="secondary">Reset filters</button>
+        <button id="newImageBtn" class="secondary">Choose another image</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+    </div>
+  </main>
+
+  <script type="module" src="./image-filter.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

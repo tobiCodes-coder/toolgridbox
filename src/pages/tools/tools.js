@@ -1,7 +1,7 @@
 import { renderHeader } from '../../components/header/header.js';
 import { renderFooter } from '../../components/footer/footer.js';
-
 import { tools } from '../../data/tools.js';
+
 
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];
 
@@ -20,37 +20,111 @@ function renderCards(filtered) {
 }
 
 const toolsContent = `
-  <div class="page-content">
+<div class="page-content">
+
     <section class="tools-page">
-      <h1>All tools</h1>
 
-      <div class="categories" id="categoryBar">
-        ${categories.map((cat, i) => `<span class="cat${i === 0 ? ' active' : ''}" data-cat="${cat}">${cat}</span>`).join('')}
-      </div>
+        <h1>All Tools</h1>
 
-      <div class="tool-grid" id="toolGrid">
-        ${renderCards(tools)}
-      </div>
+        <input
+            id="toolSearch"
+            class="tool-search"
+            type="text"
+            placeholder="Search tools..."
+        >
+
+        <div class="categories" id="categoryBar">
+
+          ${categories.map((cat, i) => `
+          <span
+            class="cat${i === 0 ? " active" : ""}"
+            data-cat="${cat}">
+            ${cat}
+          </span>
+          `).join("")}
+
+        </div>
+
+        <div class="tool-grid" id="toolGrid">
+
+            ${renderCards(tools)}
+
+        </div>
+
     </section>
-  </div>
+
+</div>
 `;
 
-document.querySelector('#app').innerHTML = `
-  ${renderHeader()}
-  ${toolsContent}
-  ${renderFooter()}
+document.querySelector("#app").innerHTML = `
+    ${renderHeader()}
+    ${toolsContent}
+    ${renderFooter()}
 `;
 
-const categoryBar = document.querySelector('#categoryBar');
-const toolGrid = document.querySelector('#toolGrid');
+const categoryBar = document.querySelector("#categoryBar");
+const toolGrid = document.querySelector("#toolGrid");
+const toolSearch = document.querySelector("#toolSearch");
 
-categoryBar.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('cat')) return;
+let activeCategory = "All";
+let searchText = "";
 
-  categoryBar.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
-  e.target.classList.add('active');
+function updateTools() {
 
-  const selected = e.target.dataset.cat;
-  const filtered = selected === 'All' ? tools : tools.filter(t => t.category === selected);
-  toolGrid.innerHTML = renderCards(filtered);
+    let filtered = tools;
+
+    if (activeCategory !== "All") {
+
+        filtered = filtered.filter(
+            tool => tool.category === activeCategory
+        );
+
+    }
+
+    if (searchText !== "") {
+
+        filtered = filtered.filter(tool =>
+
+            tool.name
+                .toLowerCase()
+                .includes(searchText)
+
+            ||
+
+            tool.desc
+                .toLowerCase()
+                .includes(searchText)
+
+        );
+
+    }
+
+    toolGrid.innerHTML = renderCards(filtered);
+
+}
+
+categoryBar.addEventListener("click", (e) => {
+
+    const cat = e.target.closest(".cat");
+
+    if (!cat) return;
+
+    categoryBar
+        .querySelectorAll(".cat")
+        .forEach(item => item.classList.remove("active"));
+
+    cat.classList.add("active");
+
+    activeCategory = cat.dataset.cat;
+
+    updateTools();
+
+});
+
+toolSearch.addEventListener("input", e => {
+
+    searchText = e.target.value.toLowerCase().trim();
+
+    updateTools();
+
 });

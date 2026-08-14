@@ -119,6 +119,43 @@
   text-decoration: underline;
 }
 
+
+.tool-search{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    margin:30px 0;
+
+    border:none;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:1rem;
+
+}
+
+.tools-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:calc(100vh - 80px);
+
+}
+
+.tool-grid{
+
+    flex:1;
+
+    overflow-y:auto;
+
+}
+
 @media (max-width: 700px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;

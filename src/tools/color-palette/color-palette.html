@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Color Palette & Matching Tool | Color Harmony Generator</title>
+  <meta name="description" content="Pick a color and instantly get matching palettes — complementary, analogous, triadic, and more. Copy in HEX, RGB, HSL, and other formats. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./color-palette.css" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <h1>Color palette & matching tool</h1>
+    <p>Pick a color and get matching palettes in every format.</p>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Pick a base color or click Random. Choose a harmony scheme to see matching colors. Click any color swatch to copy it, or use the format buttons to copy HEX, RGB, HSL, or the color name. Export the whole palette as CSS variables or JSON.
+      </div>
+    </details>
+
+    <div class="base-row">
+      <label class="base-color-picker">
+        Base color
+        <input type="color" id="baseColor" value="#185fa5" />
+      </label>
+      <button id="randomBtn" class="secondary">Random palette</button>
+    </div>
+
+    <div class="scheme-tabs">
+      <button class="scheme-btn active" data-scheme="complementary">Complementary</button>
+      <button class="scheme-btn" data-scheme="analogous">Analogous</button>
+      <button class="scheme-btn" data-scheme="triadic">Triadic</button>
+      <button class="scheme-btn" data-scheme="tetradic">Tetradic</button>
+      <button class="scheme-btn" data-scheme="monochromatic">Monochromatic</button>
+    </div>
+
+    <div id="paletteGrid" class="palette-grid"></div>
+
+    <div class="export-row">
+      <button id="exportCssBtn" class="secondary">Copy as CSS variables</button>
+      <button id="exportJsonBtn" class="secondary">Copy as JSON</button>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./color-palette.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

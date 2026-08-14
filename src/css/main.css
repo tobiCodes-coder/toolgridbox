@@ -3,6 +3,7 @@
 @import url('../pages/home/home.css');
 @import url('./tool-base.css');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +16,14 @@ body {
   color: #222;
 }
 
+h1, h2, h3 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 html, body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 #app {

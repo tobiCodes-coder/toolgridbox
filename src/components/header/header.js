@@ -1,7 +1,10 @@
 export function renderHeader() {
   return `
     <header class="site-header">
-      <span class="logo">ToolGrid</span>
+      <a href="/index.html" class="logo">
+        <span class="logo-mark">TG</span>
+        <span class="logo-text">ToolGrid</span>
+      </a>
       <nav>
         <a href="/index.html">Home</a>
         <a href="/src/pages/tools/tools.html">Tools</a>

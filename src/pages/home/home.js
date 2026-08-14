@@ -1,27 +1,73 @@
-const tools = [
-  { name: 'Text diff highlighter', desc: 'Compare two texts and see differences', icon: 'DIFF', url: '/src/tools/text-diff/text-diff.html', category: 'Text' },
-  { name: 'QR generator', desc: 'Create QR codes instantly', icon: 'QR', url: '/src/tools/qr-generator/qr-generator.html', category: 'Developer' },
-  { name: 'Image compressor', desc: 'Compress and resize images in-browser', icon: 'IMG', url: '/src/tools/image-compressor/image-compressor.html', category: 'Image' },
-  { name: 'JSON formatter', desc: 'Format, validate, and minify JSON', icon: '{ }', url: '/src/tools/json-formatter/json-formatter.html', category: 'Developer' },
-  { name: 'Data visualizer', desc: 'Turn your data into bar, line, or pie charts', icon: 'CHT', url: '/src/tools/data-visualizer/data-visualizer.html', category: 'Developer' },
-  { name: 'CSS gradient generator', desc: 'Build linear and radial gradients visually', icon: 'GRD', url: '/src/tools/gradient-generator/gradient-generator.html', category: 'Design' },
-  { name: 'Algorithm visualizer', desc: 'Watch sorting algorithms in action', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html', category: 'Developer' },
-  { name: 'Box shadow generator', desc: 'Build multi-layer CSS box shadows visually', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html', category: 'Design' }
+const stats = [
+  { number: '13+', label: 'Free tools' },
+  { number: '100%', label: 'Free forever' },
+  { number: '0', label: 'Signups required' },
+  { number: '0', label: 'Files uploaded' }
 ];
 
-const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];
+const popularTools = [
+  { name: 'Text diff highlighter', icon: 'DIFF', url: '/src/tools/text-diff/text-diff.html' },
+  { name: 'QR generator', icon: 'QR', url: '/src/tools/qr-generator/qr-generator.html' },
+  { name: 'Image compressor', icon: 'IMG', url: '/src/tools/image-compressor/image-compressor.html' },
+  { name: 'JSON formatter', icon: '{ }', url: '/src/tools/json-formatter/json-formatter.html' },
+  { name: 'Encode, decode & hash', icon: 'DEC', url: '/src/tools/converter/converter.html' },
+  { name: 'Data visualizer', icon: 'CHT', url: '/src/tools/data-visualizer/data-visualizer.html' },
+  { name: 'CSS gradient generator', icon: 'GRD', url: '/src/tools/gradient-generator/gradient-generator.html' },
+  { name: 'Algorithm visualizer', icon: 'ALG', url: '/src/tools/algorithm-visualizer/algorithm-visualizer.html' },
+  { name: 'Box shadow generator', icon: 'BXS', url: '/src/tools/box-shadow/box-shadow.html' },
+  { name: 'PDF password protect', icon: 'PDF', url: '/src/tools/pdf-password-protect/pdf-password-protect.html' },
+  { name: 'PDF page number adder', icon: 'PDF', url: '/src/tools/pdf-page-numbers/pdf-page-numbers.html' },
+  { name: 'PDF metadata editor', icon: 'PDF', url: '/src/tools/pdf-metadata-editor/pdf-metadata-editor.html' },
+  { name: 'PDF page organizer', icon: 'PDF', url: '/src/tools/pdf-page-organizer/pdf-page-organizer.html' }
+];
 
-function renderCards(filtered) {
-  if (filtered.length === 0) {
-    return '<p class="no-tools">No tools found.</p>';
-  }
+const features = [
+  { title: '100% free', desc: 'Every tool is free to use, with no hidden limits or paywalls.' },
+  { title: 'No signup', desc: 'Jump straight into any tool. No account, no email required.' },
+  { title: 'Runs in your browser', desc: 'Tools run entirely on your device — fast, with no server round-trip.' },
+  { title: 'Privacy first', desc: 'Your files and data are never uploaded anywhere. Nothing leaves your device.' }
+];
 
-  return filtered.map(tool => `
-    <a href="${tool.url}" class="tool-card">
-      <i class="icon">${tool.icon}</i>
-      <h3>${tool.name}</h3>
-      <p>${tool.desc}</p>
+const faqs = [
+  { q: 'Is ToolGrid really free?', a: 'Yes — every tool on this site is completely free to use, with no hidden fees or usage limits.' },
+  { q: 'Do I need to create an account?', a: 'No signup is required for any tool. Just open a tool and start using it.' },
+  { q: 'Is my data uploaded anywhere?', a: 'No. Every tool runs directly in your browser — your files and data never leave your device.' },
+  { q: 'Can I use these tools on mobile?', a: 'Yes, all tools are designed to work on both desktop and mobile browsers.' }
+];
+
+function renderStats() {
+  return stats.map(s => `
+    <div class="stat-item">
+      <span class="stat-number">${s.number}</span>
+      <span class="stat-label">${s.label}</span>
+    </div>
+  `).join('');
+}
+
+function renderPopularTools() {
+  return popularTools.map(t => `
+    <a href="${t.url}" class="mini-tool-card">
+      <i class="icon">${t.icon}</i>
+      <span>${t.name}</span>
     </a>
+  `).join('');
+}
+
+function renderFeatures() {
+  return features.map(f => `
+    <div class="feature-card">
+      <h3>${f.title}</h3>
+      <p>${f.desc}</p>
+    </div>
+  `).join('');
+}
+
+function renderFaqs() {
+  return faqs.map(f => `
+    <details class="faq-item">
+      <summary>${f.q}</summary>
+      <div class="faq-answer">${f.a}</div>
+    </details>
   `).join('');
 }
 
@@ -29,53 +75,51 @@ export function renderHome() {
   return `
     <div class="page-content">
       <section class="hero">
+        <div class="hero-bg"></div>
+        <span class="hero-badge">Free & open to everyone</span>
         <h1>Free online tools for developers</h1>
-        <p>Fast, simple tools. No signup required.</p>
-        <input type="text" class="search" placeholder="Search tools..." />
+        <p>Fast, simple tools that run entirely in your browser. No signup required.</p>
+        <a href="/src/pages/tools/tools.html" class="hero-cta">
+          Browse all tools
+          <span class="hero-cta-arrow">→</span>
+        </a>
       </section>
 
-      <div class="categories" id="categoryBar">
-        ${categories.map((cat, i) => `<span class="cat${i === 0 ? ' active' : ''}" data-cat="${cat}">${cat}</span>`).join('')}
-      </div>
+      <section class="popular-tools reveal">
+        <h2>Popular tools</h2>
+        <div class="mini-tool-grid">
+          ${renderPopularTools()}
+        </div>
+        <a href="/src/pages/tools/tools.html" class="view-all-link">View all tools →</a>
+      </section>
 
-      <div class="tool-grid" id="toolGrid">
-        ${renderCards(tools)}
-      </div>
+      <section class="why-choose-us reveal">
+        <h2>Why choose ToolGrid</h2>
+        <div class="feature-grid">
+          ${renderFeatures()}
+        </div>
+      </section>
+
+      <section class="faq-section reveal">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-list">
+          ${renderFaqs()}
+        </div>
+      </section>
     </div>
   `;
 }
 
 export function initHomeEvents() {
-  const categoryBar = document.querySelector('#categoryBar');
-  const toolGrid = document.querySelector('#toolGrid');
-  const searchInput = document.querySelector('.search');
+  const revealTargets = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
 
-  let activeCategory = 'All';
-
-  function applyFilters() {
-    const query = searchInput.value.trim().toLowerCase();
-
-    let filtered = activeCategory === 'All' ? tools : tools.filter(t => t.category === activeCategory);
-
-    if (query) {
-      filtered = filtered.filter(t =>
-        t.name.toLowerCase().includes(query) ||
-        t.desc.toLowerCase().includes(query)
-      );
-    }
-
-    toolGrid.innerHTML = renderCards(filtered);
-  }
-
-  categoryBar.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('cat')) return;
-
-    categoryBar.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
-    e.target.classList.add('active');
-
-    activeCategory = e.target.dataset.cat;
-    applyFilters();
-  });
-
-  searchInput.addEventListener('input', applyFilters);
+  revealTargets.forEach(el => observer.observe(el));
 }

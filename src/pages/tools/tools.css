@@ -21,3 +21,35 @@
   padding: 40px 20px;
   grid-column: 1 / -1;
 }
+
+
+.tools-page .tool-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tools-page .tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.tools-page .tool-card .icon {
+  font-size: 20px;
+  font-style: normal;
+  color: #185fa5;
+}
+
+.tools-page .tool-card h3 {
+  font-size: 15px;
+  margin: 10px 0 4px;
+}
+
+.tools-page .tool-card p {
+  font-size: 13px;
+  color: #777;
+}

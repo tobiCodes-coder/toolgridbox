@@ -1,78 +1,270 @@
-.about-page {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* ===================================
+   About Section
+=================================== */
+
+.about-section,
+.mission-section,
+.stats-section,
+.roadmap-section,
+.about-cta{
+
+    padding:90px 24px;
+
 }
 
-.about-page h1 {
-  font-size: 24px;
-  margin-bottom: 16px;
+.container{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
 }
 
-.about-page > p {
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 12px;
+.section-badge{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
 }
 
-.about-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin: 28px 0;
+.about-section h1,
+.mission-section h2,
+.stats-section h2,
+.roadmap-section h2,
+.about-cta h2{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(2rem,5vw,3rem);
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
 }
 
-.about-feature {
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 16px;
+.about-intro{
+
+    max-width:720px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#374151;
+
+    margin-bottom:20px;
+
 }
 
-.about-feature h3 {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #185fa5;
+.about-text,
+.mission-section p,
+.about-cta p{
+
+    max-width:720px;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#6b7280;
+
 }
 
-.about-feature p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.5;
+
+/* ===================================
+   Mission
+=================================== */
+
+.mission-section{
+
+    background:#f8fafc;
+
+    border-radius:24px;
+
 }
 
-.about-stats {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 24px;
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  margin-top: 20px;
+
+/* ===================================
+   Stats
+=================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:24px;
+
+    margin-top:40px;
+
 }
 
-.stat-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.stat-card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:40px 24px;
+
+    text-align:center;
+
+    transition:.3s;
+
 }
 
-.stat-number {
-  font-size: 26px;
-  font-weight: 700;
-  color: #185fa5;
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2563eb;
+
+    box-shadow:0 14px 35px rgba(37,99,235,.08);
+
 }
 
-.stat-label {
-  font-size: 12px;
-  color: #888;
-  margin-top: 4px;
+.stat-card h3{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
 }
 
-@media (max-width: 500px) {
-  .about-stats {
-    flex-direction: column;
-    gap: 14px;
-  }
+.stat-card span{
+
+    color:#6b7280;
+
+    font-size:15px;
+
+}
+
+
+/* ===================================
+   Roadmap
+=================================== */
+
+.roadmap-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:32px;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.roadmap-list li{
+
+    padding:18px 22px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    color:#374151;
+
+    transition:.25s;
+
+}
+
+.roadmap-list li:hover{
+
+    border-color:#2563eb;
+
+    transform:translateX(6px);
+
+}
+
+
+/* ===================================
+   CTA
+=================================== */
+
+.about-cta{
+
+    text-align:center;
+
+}
+
+.about-cta p{
+
+    margin:18px auto 32px;
+
+}
+
+.about-cta .hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 26px;
+
+    border-radius:14px;
+
+}
+
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width:768px){
+
+    .about-section,
+    .mission-section,
+    .stats-section,
+    .roadmap-section,
+    .about-cta{
+
+        padding:70px 20px;
+
+    }
+
+    .about-intro{
+
+        font-size:16px;
+
+    }
+
+    .stat-card{
+
+        padding:30px 20px;
+
+    }
+
 }

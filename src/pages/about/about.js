@@ -3,45 +3,150 @@ import { renderFooter } from '../../components/footer/footer.js';
 import { tools } from '../../data/tools.js';
 
 const aboutContent = `
-  <section class="about-page">
-    <h1>About ToolGrid</h1>
-    <p>ToolGrid is a growing collection of free, fast, and simple online tools — built for developers, designers, and anyone who wants to get things done without signing up or waiting around.</p>
-    <p>Everything runs right in your browser. No uploads, no accounts, no ads getting in your way — just tools that work.</p>
+  <section class="about-section">
 
-    <div class="about-features">
-      <div class="about-feature">
-        <h3>No signup</h3>
-        <p>Use any tool instantly, no account needed.</p>
-      </div>
-      <div class="about-feature">
-        <h3>Privacy-friendly</h3>
-        <p>Most tools run entirely in your browser — your files stay on your device.</p>
-      </div>
-      <div class="about-feature">
-        <h3>Always free</h3>
-        <p>No paywalls, no premium tiers, no hidden costs.</p>
-      </div>
-      <div class="about-feature">
-        <h3>Growing library</h3>
-        <p>New tools added regularly, based on what people actually need.</p>
-      </div>
+    <div class="container">
+
+        <span class="section-badge">
+            About ToolGrid
+        </span>
+
+        <h1>
+            Simple tools.
+            Better workflow.
+        </h1>
+
+        <p class="about-intro">
+            ToolGrid is a collection of free, fast and privacy-friendly
+            online tools built for developers, designers and creators.
+            Every tool is designed to solve everyday problems without
+            unnecessary complexity.
+        </p>
+
+        <p class="about-text">
+            We believe useful tools should be accessible to everyone.
+            That's why ToolGrid focuses on simplicity, performance,
+            accessibility and a clean user experience without requiring
+            an account.
+        </p>
+
     </div>
 
-    <div class="about-stats">
-      <div class="stat-box">
-        <span class="stat-number">${tools.length}+</span>
-        <span class="stat-label">Tools</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number">5</span>
-        <span class="stat-label">Categories</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number">0</span>
-        <span class="stat-label">Signups required</span>
-      </div>
+</section>
+
+<section class="mission-section">
+
+    <div class="container">
+
+        <span class="section-badge">
+            Our Mission
+        </span>
+
+        <h2>
+            Build tools people
+            actually enjoy using.
+        </h2>
+
+        <p>
+            Our goal is to create lightweight, browser-based utilities
+            that save time, respect user privacy and remain completely
+            free for everyone.
+        </p>
+
     </div>
-  </section>
+
+</section>
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <h2>
+            ToolGrid by Numbers
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3>32+</h3>
+
+                <span>Tools</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>5</h3>
+
+                <span>Categories</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>0</h3>
+
+                <span>Signup Required</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="roadmap-section">
+
+    <div class="container">
+
+        <span class="section-badge">
+            What's Next
+        </span>
+
+        <h2>
+            Growing every month
+        </h2>
+
+        <ul class="roadmap-list">
+
+            <li>✔ More high-quality tools</li>
+
+            <li>✔ Better performance</li>
+
+            <li>✔ Accessibility improvements</li>
+
+            <li>✔ Mobile-first experience</li>
+
+            <li>✔ Continuous updates</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="about-cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to explore ToolGrid?
+        </h2>
+
+        <p>
+            Discover free online tools designed to make everyday tasks
+            faster and easier.
+        </p>
+
+        <a href="/src/pages/tools/tools.html" class="hero-btn">
+            Explore Tools
+        </a>
+
+    </div>
+
+</section>
 `;
 
 document.querySelector('#app').innerHTML = `

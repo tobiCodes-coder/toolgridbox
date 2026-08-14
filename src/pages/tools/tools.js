@@ -6,17 +6,37 @@ import { tools } from '../../data/tools.js';
 const categories = ['All', 'Image', 'Text', 'Developer', 'Design', 'PDF'];
 
 function renderCards(filtered) {
-  if (filtered.length === 0) {
-    return '<p class="no-tools">No tools in this category yet.</p>';
-  }
 
-  return filtered.map(tool => `
-    <a href="${tool.url}" class="tool-card">
-      <i class="icon">${tool.icon}</i>
-      <h3>${tool.name}</h3>
-      <p>${tool.desc}</p>
-    </a>
-  `).join('');
+    if (filtered.length === 0) {
+
+        return `
+            <div class="no-tools">
+
+                <div class="no-tools-icon">🔍</div>
+
+                <h3>No tools found</h3>
+
+                <p>
+                    Try another keyword or choose a different category.
+                </p>
+
+            </div>
+        `;
+
+    }
+
+    return filtered.map(tool => `
+        <a href="${tool.url}" class="tool-card">
+
+            <i class="icon">${tool.icon}</i>
+
+            <h3>${tool.name}</h3>
+
+            <p>${tool.desc}</p>
+
+        </a>
+    `).join("");
+
 }
 
 const toolsContent = `
@@ -25,13 +45,44 @@ const toolsContent = `
     <section class="tools-page">
 
         <h1>All Tools</h1>
+        <p class="tools-subtitle">
+            Fast, free and privacy-friendly online tools.
+        </p>
+
+        <div class="search-box">
+
+    <svg
+        class="search-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <circle cx="11" cy="11" r="8"></circle>
+
+        <path d="M21 21l-4.35-4.35"></path>
+
+    </svg>
 
         <input
-            id="toolSearch"
-            class="tool-search"
-            type="text"
-            placeholder="Search tools..."
-        >
+          type="text"
+          id="toolSearch"
+          class="tool-search"
+          placeholder="Search tools..."
+          >
+
+        </div>
+
+      <div class="tools-topbar">
+
+    <span class="results-count" id="resultsCount">
+        ${tools.length} Tools
+    </span>
+
+</div>
 
         <div class="categories" id="categoryBar">
 
@@ -65,6 +116,7 @@ document.querySelector("#app").innerHTML = `
 const categoryBar = document.querySelector("#categoryBar");
 const toolGrid = document.querySelector("#toolGrid");
 const toolSearch = document.querySelector("#toolSearch");
+const resultsCount = document.querySelector("#resultsCount");
 
 let activeCategory = "All";
 let searchText = "";
@@ -100,6 +152,8 @@ function updateTools() {
     }
 
     toolGrid.innerHTML = renderCards(filtered);
+    resultsCount.textContent =
+    `${filtered.length} Tool${filtered.length !== 1 ? "s" : ""}`;
 
 }
 

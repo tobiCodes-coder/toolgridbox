@@ -1,70 +1,308 @@
-.contact-page {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* ===========================
+   Contact
+=========================== */
+
+.contact-page{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:70px 24px 90px;
+
 }
 
-.contact-page h1 {
-  font-size: 24px;
-  margin-bottom: 16px;
+.contact-header{
+
+    max-width:650px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
 }
 
-.contact-page p {
-  color: #555;
-  margin-bottom: 20px;
+.contact-header h1{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(2.2rem,5vw,3rem);
+
+    font-weight:700;
+
+    margin:16px 0;
+
+    color:#111827;
+
 }
 
-.contact-page a {
-  color: #185fa5;
-  text-decoration: none;
+.contact-header p{
+
+    color:#6b7280;
+
+    font-size:17px;
+
+    line-height:1.7;
+
 }
 
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 450px;
+/* ===========================
+   Layout
+=========================== */
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
 }
 
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 13px;
-  color: #555;
-  gap: 6px;
+
+/* ===========================
+   Contact Info
+=========================== */
+
+.contact-info{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+.contact-info h2{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    margin-bottom:16px;
+
+}
+
+.contact-info>p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+    margin-bottom:28px;
+
+}
+
+.info-item{
+
+    padding:18px 0;
+
+    border-top:1px solid #ececec;
+
+}
+
+.info-item:first-of-type{
+
+    border-top:none;
+
+    padding-top:0;
+
+}
+
+.info-item h3{
+
+    font-size:15px;
+
+    color:#2563eb;
+
+    margin-bottom:6px;
+
+}
+
+.info-item p{
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+}
+
+
+/* ===========================
+   Form
+=========================== */
+
+.contact-form{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:32px;
+
+}
+
+.contact-form label{
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+    color:#374151;
+
 }
 
 .contact-form input,
-.contact-form textarea {
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  font-family: inherit;
+.contact-form textarea{
+
+    width:100%;
+
+    margin-top:8px;
+
+    padding:14px 16px;
+
+    border:1px solid #dcdcdc;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    font-family:inherit;
+
 }
 
-.contact-form button {
-  padding: 10px 24px;
-  background: #185fa5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  align-self: flex-start;
+.contact-form input{
+
+    height:54px;
+
 }
 
-.contact-form button:hover:not(:disabled) {
-  background: #0c447c;
+.contact-form textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
 }
 
-.contact-form button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
 }
 
-.form-status {
-  font-size: 13px;
-  color: #2f8a2f;
+.contact-form button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.contact-form button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.contact-form button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+.form-status{
+
+    margin-top:18px;
+
+    font-size:14px;
+
+    color:#2563eb;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:900px){
+
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-info{
+
+        position:static;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .contact-page{
+
+        padding:50px 18px 70px;
+
+    }
+
+    .contact-form,
+    .contact-info{
+
+        padding:24px;
+
+    }
+
 }

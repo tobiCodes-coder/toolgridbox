@@ -135,37 +135,38 @@
 .mini-tool-card {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 16px;
+  gap: 14px;
   text-decoration: none;
   color: inherit;
   text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px 6px;
+  transition: transform 0.2s ease;
 }
 
 .mini-tool-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.mini-tool-card:hover .icon {
+  transform: scale(1.06);
 }
 
 .mini-tool-card .icon {
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
-  color: #185fa5;
-  background: #eef4fb;
-  width: 34px;
-  height: 34px;
-  min-width: 34px;
+  color: white;
+  background: linear-gradient(135deg, #185fa5, #2f8fd6);
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(24, 95, 165, 0.25);
+  transition: transform 0.2s ease;
 }
-
 .mini-tool-card span:last-child {
   font-size: 13px;
   font-weight: 500;

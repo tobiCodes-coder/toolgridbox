@@ -8,6 +8,11 @@ export function renderFooter() {
             <span class="logo-text">ToolGrid</span>
           </div>
           <p>Free, fast, browser-based tools for developers and designers. No signup, no uploads, no cost.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Twitter/X">X</a>
+            <a href="#" aria-label="Email">✉</a>
+          </div>
         </div>
 
         <div class="footer-col">
@@ -25,21 +30,12 @@ export function renderFooter() {
           <a href="/src/pages/tools/tools.html">PDF tools</a>
           <a href="/src/pages/tools/tools.html">Image tools</a>
         </div>
-
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <div class="footer-socials">
-            <a href="#" aria-label="GitHub">GH</a>
-            <a href="#" aria-label="Twitter/X">X</a>
-            <a href="#" aria-label="Email">✉</a>
-          </div>
-        </div>
       </div>
 
       <div class="footer-bottom">
-  <p>&copy; 2026 ToolGrid. All rights reserved.</p>
-  <a href="#" class="back-to-top">Back to top ↑</a>
-</div>
+        <p>&copy; 2026 ToolGrid. All rights reserved.</p>
+        <a href="#" class="back-to-top">Back to top ↑</a>
+      </div>
     </footer>
   `;
 }

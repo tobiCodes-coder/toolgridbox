@@ -3,6 +3,7 @@ import { renderFooter, initFooter } from './components/footer/footer.js';
 import { renderHome, initHomeEvents } from './pages/home/home.js';
 
 document.querySelector('#app').innerHTML = renderHeader() + renderHome() + renderFooter();
+document.querySelector('#app').classList.add('app-home');
 
 // Header events attach
 initHeader();

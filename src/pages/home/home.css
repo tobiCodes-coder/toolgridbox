@@ -1,6 +1,6 @@
-#app{background:var(--color-bg);height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;}
-.hero,.popular-tools,.why-choose-us,.faq-section{scroll-snap-align:start;scroll-margin-top:var(--header-h,64px);}
-.site-footer{scroll-snap-align:end;}
+.app-home{background:var(--color-bg);height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;}
+.app-home .hero,.app-home .popular-tools,.app-home .why-choose-us,.app-home .faq-section{scroll-snap-align:start;scroll-margin-top:var(--header-h,64px);}
+.app-home .site-footer{scroll-snap-align:end;}
 .section-header{text-align:center;margin-bottom:40px;}
 .section-header h2{font-size:var(--text-2xl);font-weight:700;color:var(--color-text);margin:0 0 8px 0;}
 .section-header p{font-size:var(--text-md);color:var(--color-text-2);margin:0;}

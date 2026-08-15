@@ -1,10 +1,18 @@
-import { renderHeader } from './components/header/header.js';
-import { renderFooter } from './components/footer/footer.js';
+import { renderHeader, initHeader } from './components/header/header.js';
+import { renderFooter, initFooter } from './components/footer/footer.js';
 import { renderHome, initHomeEvents } from './pages/home/home.js';
 
 document.querySelector('#app').innerHTML = renderHeader() + renderHome() + renderFooter();
+
+// Header events attach
+initHeader();
+
+// Home events attach
 initHomeEvents();
 
+initFooter(); 
+
+// Header height variable
 function setHeaderHeightVar() {
   const header = document.querySelector('.site-header');
   if (header) {
@@ -15,6 +23,7 @@ function setHeaderHeightVar() {
 setHeaderHeightVar();
 window.addEventListener('resize', setHeaderHeightVar);
 
+// Back to top
 document.addEventListener('click', (e) => {
   const backToTop = e.target.closest('.back-to-top');
   if (backToTop) {

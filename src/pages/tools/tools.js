@@ -1,5 +1,5 @@
-import { renderHeader } from '../../components/header/header.js';
-import { renderFooter } from '../../components/footer/footer.js';
+import { renderHeader, initHeader } from '../../components/header/header.js';
+import { renderFooter, initFooter } from '../../components/footer/footer.js';
 import { tools } from '../../data/tools.js';
 
 
@@ -112,6 +112,10 @@ document.querySelector("#app").innerHTML = `
     ${toolsContent}
     ${renderFooter()}
 `;
+
+// Initialize header events
+initHeader();
+initFooter();
 
 const categoryBar = document.querySelector("#categoryBar");
 const toolGrid = document.querySelector("#toolGrid");

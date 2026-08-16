@@ -23,5 +23,6 @@ ${urls}
 </urlset>
 `;
 
+writeFileSync('sitemap.xml', xml);
 writeFileSync('public/sitemap.xml', xml);
 console.log(`✅ sitemap.xml generated — ${all.length} URLs`);

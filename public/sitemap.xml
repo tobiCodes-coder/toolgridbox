@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://toolgridbox.pages.dev/index.html</loc>
     <priority>1.0</priority>
@@ -16,7 +16,6 @@
     <loc>https://toolgridbox.pages.dev/src/pages/contact/contact.html</loc>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://toolgridbox.pages.dev/src/tools/text-diff/text-diff.html</loc>
     <priority>0.8</priority>
@@ -139,6 +138,10 @@
   </url>
   <url>
     <loc>https://toolgridbox.pages.dev/src/tools/font-pairing/font-pairing.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toolgridbox.pages.dev/src/tools/color-palette/color-palette.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

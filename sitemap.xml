@@ -61,19 +61,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/pdf-merge/pdf-merge.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://toolgridbox.pages.dev/src/tools/pdf-split/pdf-split.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://toolgridbox.pages.dev/src/tools/images-to-pdf/images-to-pdf.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/pdf-rotate/pdf-rotate.html</loc>
     <priority>0.8</priority>
   </url>
   <url>

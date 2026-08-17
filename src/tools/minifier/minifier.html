@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free CSS & JS Minifier | Minify and Beautify Code</title>
+  <meta name="description" content="Minify or beautify CSS and JavaScript code instantly. See file size savings before and after. Free, works in your browser, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./minifier.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/minifier/minifier.html" />
+  <meta property="og:title" content="Free CSS & JS Minifier | Minify and Beautify Code" />
+  <meta property="og:description" content="Minify or beautify CSS and JavaScript instantly with size savings stats. Free, no signup." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/minifier/minifier.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">MIN</div>
+      <h1>CSS & JS minifier</h1>
+      <p>Minify for production or beautify for debugging — instantly, in your browser.</p>
+    </header>
+
+    <div class="controls-row">
+      <div class="mode-row" id="langRow">
+        <button class="mode-btn active" data-lang="css">CSS</button>
+        <button class="mode-btn" data-lang="js">JavaScript</button>
+      </div>
+      <div class="mode-row" id="actionRow">
+        <button class="mode-btn active" data-action="minify">Minify ⚡</button>
+        <button class="mode-btn" data-action="beautify">Beautify ✨</button>
+      </div>
+    </div>
+
+    <div class="editor-grid">
+      <div class="pane">
+        <div class="pane-head">
+          <span class="pane-title">Input</span>
+          <div class="pane-actions">
+            <button id="sampleBtn" class="mini-btn">Load sample</button>
+            <button id="clearBtn" class="mini-btn">Clear</button>
+          </div>
+        </div>
+        <textarea id="inputArea" spellcheck="false" placeholder="Paste your CSS or JS here..."></textarea>
+      </div>
+      <div class="pane">
+        <div class="pane-head">
+          <span class="pane-title">Output</span>
+          <div class="pane-actions">
+            <button id="copyBtn" class="mini-btn primary">Copy</button>
+            <button id="downloadBtn" class="mini-btn">Download</button>
+          </div>
+        </div>
+        <textarea id="outputArea" readonly spellcheck="false" placeholder="Result appears here..."></textarea>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <span id="statOrig">Original: 0 B</span>
+      <span id="statNew">Output: 0 B</span>
+      <span id="statSaved" class="saved-badge">—</span>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./minifier.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

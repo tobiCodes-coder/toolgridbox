@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Markdown to HTML Converter | Live Preview</title>
+  <meta name="description" content="Convert Markdown to HTML and HTML to Markdown instantly with live preview. Copy or download the result. Free, no signup, works in your browser." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./markdown-html.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/markdown-html/markdown-html.html" />
+  <meta property="og:title" content="Free Markdown to HTML Converter | Live Preview" />
+  <meta property="og:description" content="Convert Markdown to HTML and back, instantly with live preview. Free, no signup." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/markdown-html/markdown-html.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">MD</div>
+      <h1>Markdown ↔ HTML converter</h1>
+      <p>Convert both ways with live preview. Everything stays in your browser.</p>
+    </header>
+
+    <div class="mode-row">
+      <button class="mode-btn active" data-mode="md2html">Markdown → HTML</button>
+      <button class="mode-btn" data-mode="html2md">HTML → Markdown</button>
+    </div>
+
+    <div class="toolbar" id="mdToolbar">
+      <button data-action="h1" title="Heading 1">H1</button>
+      <button data-action="h2" title="Heading 2">H2</button>
+      <button data-action="bold" title="Bold"><strong>B</strong></button>
+      <button data-action="italic" title="Italic"><em>I</em></button>
+      <button data-action="code" title="Inline code">&lt;/&gt;</button>
+      <button data-action="link" title="Link">🔗</button>
+      <button data-action="ul" title="Bullet list">• List</button>
+      <button data-action="ol" title="Numbered list">1. List</button>
+      <button data-action="quote" title="Quote">❝</button>
+    </div>
+
+    <div class="editor-grid">
+      <div class="pane">
+        <div class="pane-head">
+          <span class="pane-title" id="inputTitle">Markdown</span>
+          <div class="pane-actions">
+            <button id="loadExampleBtn" class="mini-btn">Load example</button>
+            <button id="clearBtn" class="mini-btn">Clear</button>
+          </div>
+        </div>
+        <textarea id="inputArea" spellcheck="false" placeholder="Type or paste your Markdown here..."></textarea>
+      </div>
+      <div class="pane" id="previewPane">
+        <div class="pane-head"><span class="pane-title">Live Preview</span></div>
+        <div id="previewContent" class="preview-content"></div>
+      </div>
+    </div>
+
+    <div class="output-card">
+      <div class="pane-head">
+        <span class="pane-title" id="outputTitle">HTML Output</span>
+        <div class="pane-actions">
+          <button id="copyOutputBtn" class="mini-btn primary">Copy</button>
+          <button id="downloadBtn" class="mini-btn">Download</button>
+        </div>
+      </div>
+      <textarea id="outputArea" readonly spellcheck="false"></textarea>
+    </div>
+
+    <div class="stats-row">
+      <span id="statsWords">0 words</span>
+      <span id="statsChars">0 characters</span>
+      <span id="statsTime">~0 min read</span>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./markdown-html.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

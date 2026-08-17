@@ -29,6 +29,7 @@ export const tools = [
     { name: 'Image filter editor', desc: 'Apply filters and adjust brightness, contrast, and more', icon: 'FLT', url: '/src/tools/image-filter/image-filter.html', category: 'Image' },
     { name: 'Font pairing tool', desc: 'Preview and pair Google Fonts for headings and body text', icon: 'FNT', url: '/src/tools/font-pairing/font-pairing.html', category: 'Design' },
     { name: 'Color palette & matching tool', desc: 'Generate matching color palettes with all formats', icon: 'PAL', url: '/src/tools/color-palette/color-palette.html', category: 'Design' },
-    { name: 'Password generator', desc: 'Create strong, secure random passwords and passphrases', icon: 'PWD', url: '/src/tools/password-generator/password-generator.html', category: 'Developer' }
-
+    { name: 'Password generator', desc: 'Create strong, secure random passwords and passphrases', icon: 'PWD', url: '/src/tools/password-generator/password-generator.html', category: 'Developer' },
+    { name: 'Markdown ↔ HTML converter', desc: 'Convert Markdown to HTML and back with live preview', icon: 'MD', url: '/src/tools/markdown-html/markdown-html.html', category: 'Developer' },
+    
 ];

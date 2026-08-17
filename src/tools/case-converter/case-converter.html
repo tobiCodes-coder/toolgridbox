@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Case Converter | UPPERCASE, lowercase, camelCase & More</title>
+  <meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case and 7 more styles instantly. Free, no signup, works in your browser." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./case-converter.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/case-converter/case-converter.html" />
+  <meta property="og:title" content="Free Case Converter | UPPERCASE, lowercase, camelCase & More" />
+  <meta property="og:description" content="Convert text between 13 case styles instantly. Free, no signup, works in your browser." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/case-converter/case-converter.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">Aa</div>
+      <h1>Case converter</h1>
+      <p>Convert text between 13 case styles — instantly, as you type.</p>
+    </header>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">Type or paste your text, pick a case style, and the result appears live. Copy or download the output, or send it back to the input for chained conversions.</div>
+    </details>
+
+    <div class="pane">
+      <div class="pane-head">
+        <span class="pane-title">Your text</span>
+        <div class="pane-actions">
+          <button id="sampleBtn" class="mini-btn">Load sample</button>
+          <button id="clearBtn" class="mini-btn">Clear</button>
+        </div>
+      </div>
+      <textarea id="inputArea" placeholder="Type or paste your text here..."></textarea>
+      <div class="stats-row">
+        <span id="statChars">0 characters</span>
+        <span id="statCharsNoSpace">0 (no spaces)</span>
+        <span id="statWords">0 words</span>
+        <span id="statSentences">0 sentences</span>
+        <span id="statLines">0 lines</span>
+      </div>
+    </div>
+
+    <div class="case-grid" id="caseGrid">
+      <button class="case-btn active" data-case="upper">UPPERCASE</button>
+      <button class="case-btn" data-case="lower">lowercase</button>
+      <button class="case-btn" data-case="title">Title Case</button>
+      <button class="case-btn" data-case="sentence">Sentence case</button>
+      <button class="case-btn" data-case="camel">camelCase</button>
+      <button class="case-btn" data-case="pascal">PascalCase</button>
+      <button class="case-btn" data-case="snake">snake_case</button>
+      <button class="case-btn" data-case="kebab">kebab-case</button>
+      <button class="case-btn" data-case="constant">CONSTANT_CASE</button>
+      <button class="case-btn" data-case="train">Train-Case</button>
+      <button class="case-btn" data-case="dot">dot.case</button>
+      <button class="case-btn" data-case="alternating">aLtErNaTiNg</button>
+      <button class="case-btn" data-case="swap">SwAp cASe</button>
+    </div>
+
+    <div class="pane">
+      <div class="pane-head">
+        <span class="pane-title">Result</span>
+        <div class="pane-actions">
+          <button id="swapBtn" class="mini-btn">↺ Use as input</button>
+          <button id="copyBtn" class="mini-btn primary">Copy</button>
+          <button id="downloadBtn" class="mini-btn">Download</button>
+        </div>
+      </div>
+      <textarea id="outputArea" readonly placeholder="Converted text appears here..."></textarea>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./case-converter.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

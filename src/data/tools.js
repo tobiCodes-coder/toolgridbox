@@ -34,5 +34,6 @@ export const tools = [
     { name: 'CSS & JS minifier', desc: 'Minify or beautify CSS and JavaScript code', icon: 'MIN', url: '/src/tools/minifier/minifier.html', category: 'Developer' },
     { name: 'Regex tester', desc: 'Test regular expressions with live matching and capture groups', icon: 'RGX', url: '/src/tools/regex-tester/regex-tester.html', category: 'Developer' },
     { name: 'Code to image', desc: 'Turn code snippets into beautiful shareable images', icon: 'C2I', url: '/src/tools/code-to-image/code-to-image.html', category: 'Developer' },
+    { name: 'Case converter', desc: 'Convert text between 13 case styles instantly', icon: 'Aa', url: '/src/tools/case-converter/case-converter.html', category: 'Text' },
     
 ];

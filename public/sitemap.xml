@@ -136,24 +136,4 @@
     <loc>https://toolgridbox.pages.dev/src/tools/color-palette/color-palette.html</loc>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/background-remover/background-remover.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/image-cropper/image-cropper.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/image-to-base64/image-to-base64.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/favicon-generator/favicon-generator.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://toolgridbox.pages.dev/src/tools/meme-generator/meme-generator.html</loc>
-    <priority>0.8</priority>
-  </url>
 </urlset>

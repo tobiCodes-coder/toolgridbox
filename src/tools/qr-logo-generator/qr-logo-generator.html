@@ -21,11 +21,8 @@
   <a href="/index.html" class="back-home">← Back to ToolGrid</a>
 
   <main class="tool-container">
-    <header class="tool-hero">
-      <div class="tool-icon">QRL</div>
-      <h1>QR logo generator</h1>
-      <p>Generate custom QR codes with your own logo image inside. Nothing leaves your browser.</p>
-    </header>
+    <h1>QR logo generator</h1>
+    <p>Generate custom QR codes with your own logo image inside. Nothing leaves your browser.</p>
 
     <details class="how-to-use">
       <summary>How to use this tool</summary>
@@ -34,30 +31,32 @@
       </div>
     </details>
 
-    <div class="notice-box">⚠️ Keeping the logo size under 25% ensures your QR code remains easy to scan with any phone camera.</div>
+    <div class="notice-box">
+      ⚠ Keeping the logo size under 25% ensures your QR code remains easy to scan with any phone camera.
+    </div>
 
     <div class="qr-grid">
+      <!-- Controls Column -->
       <div class="control-panel">
+        
         <div class="field-group">
-          <label class="field-label" for="qrText">URL or Text</label>
-          <input type="text" id="qrText" placeholder="https://example.com" value="https://example.com" />
+          <label class="field-label">
+            URL or Text
+            <input type="text" id="qrText" placeholder="https://example.com" value="https://example.com" />
+          </label>
         </div>
 
         <div class="field-group">
           <label class="field-label">Logo Image (Optional)</label>
-          <div id="dropZone" class="drop-zone compact">
-            <div class="drop-icon small">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <p id="dropZoneText" class="drop-title">Click to upload logo</p>
-            <span class="drop-hint">PNG, JPG — max 2MB</span>
+          <div id="dropZone" class="drop-zone">
+            <p id="dropZoneText">Drag & drop logo here, or click to select</p>
             <input type="file" id="fileInput" accept="image/*" hidden />
           </div>
         </div>
 
-        <div class="two-col">
+        <div class="color-inputs">
           <div class="field-group">
-            <label class="field-label" for="logoPosSelect">Logo Position</label>
+            <label class="field-label">Logo Position</label>
             <select id="logoPosSelect">
               <option value="center">Center</option>
               <option value="top-left">Top Left</option>
@@ -66,8 +65,9 @@
               <option value="bottom-right">Bottom Right</option>
             </select>
           </div>
+
           <div class="field-group">
-            <label class="field-label" for="logoShapeSelect">Logo Shape</label>
+            <label class="field-label">Logo Shape</label>
             <select id="logoShapeSelect">
               <option value="square">Square</option>
               <option value="circle">Circle</option>
@@ -77,19 +77,13 @@
         </div>
 
         <div class="color-inputs">
-          <label class="field-label color-label">
-            <span>QR Color</span>
-            <div class="color-wrapper">
-              <input type="color" id="fgColor" value="#000000" />
-              <span class="color-hex" id="fgHex">#000000</span>
-            </div>
+          <label class="field-label">
+            QR Color
+            <input type="color" id="fgColor" value="#000000" />
           </label>
-          <label class="field-label color-label">
-            <span>Background</span>
-            <div class="color-wrapper">
-              <input type="color" id="bgColor" value="#ffffff" />
-              <span class="color-hex" id="bgHex">#ffffff</span>
-            </div>
+          <label class="field-label">
+            Background
+            <input type="color" id="bgColor" value="#ffffff" />
           </label>
         </div>
 
@@ -99,13 +93,14 @@
         </div>
 
         <div class="action-row">
-          <button id="downloadBtn">Download QR Code</button>
+          <button id="downloadBtn" class="secondary">Download QR Code</button>
           <button id="resetBtn" class="secondary">Reset</button>
         </div>
 
         <p id="statusMsg" class="status-msg"></p>
       </div>
 
+      <!-- Live Preview Column -->
       <div class="preview-panel">
         <span class="preview-title">Live Preview</span>
         <div class="img-preview-container">

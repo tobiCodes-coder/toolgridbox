@@ -28,5 +28,10 @@ export const tools = [
     { name: 'Image format converter', desc: 'Convert images between JPG, PNG, WebP formats', icon: 'CONV', url: '/src/tools/image-format-converter/image-format-converter.html', category: 'Image' },
     { name: 'Image filter editor', desc: 'Apply filters and adjust brightness, contrast, and more', icon: 'FLT', url: '/src/tools/image-filter/image-filter.html', category: 'Image' },
     { name: 'Font pairing tool', desc: 'Preview and pair Google Fonts for headings and body text', icon: 'FNT', url: '/src/tools/font-pairing/font-pairing.html', category: 'Design' },
-    { name: 'Color palette & matching tool', desc: 'Generate matching color palettes with all formats', icon: 'PAL', url: '/src/tools/color-palette/color-palette.html', category: 'Design' }
-];
+    { name: 'Color palette & matching tool', desc: 'Generate matching color palettes with all formats', icon: 'PAL', url: '/src/tools/color-palette/color-palette.html', category: 'Design' },
+      { name: 'Background remover', desc: 'Remove image backgrounds automatically', icon: 'BG', url: '/src/tools/background-remover/background-remover.html', category: 'Image' },
+  { name: 'Image cropper', desc: 'Crop images to any size or aspect ratio', icon: 'CROP', url: '/src/tools/image-cropper/image-cropper.html', category: 'Image' },
+  { name: 'Image to Base64', desc: 'Convert images to Base64 encoded strings', icon: 'B64', url: '/src/tools/image-to-base64/image-to-base64.html', category: 'Image' },
+  { name: 'Favicon generator', desc: 'Generate favicons in multiple sizes for your website', icon: 'FAV', url: '/src/tools/favicon-generator/favicon-generator.html', category: 'Image' },
+  { name: 'Meme generator', desc: 'Create memes with custom text and styling', icon: 'MEME', url: '/src/tools/meme-generator/meme-generator.html', category: 'Image' }
+];// Add before the closing ];

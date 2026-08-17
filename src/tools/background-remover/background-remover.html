@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Background Remover | Remove Image Background Online</title>
+  <meta name="description" content="Remove image backgrounds automatically. Free, fast, works in your browser. No signup required." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./background-remover.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/background-remover/background-remover.html" />
+  <meta property="og:title" content="Free Background Remover | Remove Image Background Online" />
+  <meta property="og:description" content="Remove image backgrounds automatically. Free, fast, works in your browser." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/background-remover/background-remover.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">BG</div>
+      <h1>Background remover</h1>
+      <p>Remove image backgrounds automatically. Works entirely in your browser.</p>
+    </header>
+    <details class="how-to-use"><summary>How to use this tool</summary><div class="how-to-use-content">Upload an image, wait for automatic background removal, then download the transparent PNG.</div></details>
+    <div id="dropZone" class="drop-zone">
+      <div class="drop-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <p class="drop-title">Drag & drop an image</p>
+      <span class="drop-hint">JPG, PNG, WebP supported</span>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+    </div>
+    <div id="editorArea" class="editor-area" style="display:none;">
+      <div class="compare-row">
+        <div class="compare-box"><p class="compare-label">Original</p><img id="originalImg" /></div>
+        <div class="compare-box"><p class="compare-label">Background Removed</p><img id="processedImg" /><canvas id="canvas" style="display:none;"></canvas></div>
+      </div>
+      <div class="action-row"><button id="downloadBtn">Download PNG</button><button id="resetBtn" class="secondary">Choose another image</button></div>
+      <p id="statusMsg" class="status-msg"></p>
+    </div>
+  </main>
+  <script type="module" src="./background-remover.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

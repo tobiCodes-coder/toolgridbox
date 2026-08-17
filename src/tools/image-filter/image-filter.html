@@ -21,8 +21,11 @@
   <a href="/index.html" class="back-home">← Back to ToolGrid</a>
 
   <main class="tool-container">
-    <h1>Image filter editor</h1>
-    <p>Adjust and filter your images visually, then download the result.</p>
+    <header class="tool-hero">
+      <div class="tool-icon">FLT</div>
+      <h1>Image filter editor</h1>
+      <p>Adjust and filter your images visually, then download the result.</p>
+    </header>
 
     <details class="how-to-use">
       <summary>How to use this tool</summary>
@@ -32,7 +35,11 @@
     </details>
 
     <div id="dropZone" class="drop-zone">
-      <p>Drag & drop an image here, or click to select</p>
+      <div class="drop-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <p class="drop-title">Drag & drop an image here</p>
+      <span class="drop-hint">or click to browse — JPG, PNG, WebP supported</span>
       <input type="file" id="fileInput" accept="image/*" hidden />
     </div>
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Code to Image | Turn Code into Beautiful Images</title>
+  <meta name="description" content="Convert code snippets into beautiful shareable images with themes, syntax highlighting, and window styles. Download PNG or copy to clipboard. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./code-to-image.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/code-to-image/code-to-image.html" />
+  <meta property="og:title" content="Free Code to Image | Turn Code into Beautiful Images" />
+  <meta property="og:description" content="Convert code snippets into beautiful shareable images with themes and syntax highlighting. Free, no signup." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/code-to-image/code-to-image.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">C2I</div>
+      <h1>Code to image</h1>
+      <p>Turn code snippets into beautiful images for social media.</p>
+    </header>
+
+    <div class="workspace">
+      <div class="left-col">
+        <textarea id="codeInput" spellcheck="false" placeholder="Paste your code here..."></textarea>
+
+        <div class="options-card">
+          <div class="opt-grid">
+            <label class="field-label">Theme
+              <select id="themeSelect">
+                <option value="dracula">Dracula</option>
+                <option value="github">GitHub Dark</option>
+                <option value="monokai">Monokai</option>
+                <option value="light">Light</option>
+              </select>
+            </label>
+            <label class="field-label">Language
+              <select id="langSelect">
+                <option value="js">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="text">Plain text</option>
+              </select>
+            </label>
+            <label class="field-label">Window style
+              <select id="windowSelect">
+                <option value="mac">macOS dots</option>
+                <option value="none">No header</option>
+              </select>
+            </label>
+            <label class="field-label">File name
+              <input type="text" id="filenameInput" value="main.js" />
+            </label>
+          </div>
+          <div class="opt-grid">
+            <label class="field-label">Font size: <span id="fontValue">14</span>px
+              <input type="range" id="fontRange" min="12" max="20" value="14" />
+            </label>
+            <label class="field-label">Padding: <span id="padValue">24</span>px
+              <input type="range" id="padRange" min="16" max="48" value="24" />
+            </label>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button id="downloadBtn">Download PNG</button>
+          <button id="copyImgBtn" class="secondary">Copy image</button>
+          <button id="sampleBtn" class="secondary">Load sample</button>
+        </div>
+        <p id="statusMsg" class="status-msg"></p>
+      </div>
+
+      <div class="preview-stage">
+        <div id="previewCard" class="code-card">
+          <div class="card-header" id="cardHeader">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span id="fileName" class="file-name">main.js</span>
+          </div>
+          <pre id="previewCode" class="code-pre"></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./code-to-image.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

@@ -21,8 +21,11 @@
   <a href="/index.html" class="back-home">← Back to ToolGrid</a>
 
   <main class="tool-container">
-    <h1>Image resizer</h1>
-    <p>Resize images for Facebook, Instagram, YouTube, or custom dimensions. Nothing leaves your browser.</p>
+    <header class="tool-hero">
+      <div class="tool-icon">SIZE</div>
+      <h1>Image resizer</h1>
+      <p>Resize images for Facebook, Instagram, YouTube, or custom dimensions. Nothing leaves your browser.</p>
+    </header>
 
     <details class="how-to-use">
       <summary>How to use this tool</summary>
@@ -31,12 +34,14 @@
       </div>
     </details>
 
-    <div class="notice-box">
-      ⚠ Keeping "Lock Aspect Ratio" checked prevents your image from stretching or distorting when changing dimensions.
-    </div>
+    <div class="notice-box">⚠️ Keeping "Lock Aspect Ratio" checked prevents your image from stretching or distorting when changing dimensions.</div>
 
     <div id="dropZone" class="drop-zone">
-      <p>Drag & drop an image here, or click to select</p>
+      <div class="drop-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+      </div>
+      <p class="drop-title">Drag & drop an image here</p>
+      <span class="drop-hint">or click to browse — JPG, PNG, WebP supported</span>
       <input type="file" id="fileInput" accept="image/*" hidden />
     </div>
 
@@ -44,11 +49,9 @@
       <p class="file-info-line" id="fileInfoLine"></p>
 
       <div class="resizer-grid">
-        <!-- Controls Column -->
         <div class="control-panel">
-          
           <div class="field-group">
-            <label class="field-label">Social Media Presets</label>
+            <label class="field-label" for="presetSelect">Social Media Presets</label>
             <select id="presetSelect">
               <option value="custom">Custom Dimensions</option>
               <optgroup label="Facebook">
@@ -83,12 +86,10 @@
           </div>
 
           <div class="dimension-inputs">
-            <label class="field-label">
-              Width (px)
+            <label class="field-label">Width (px)
               <input type="number" id="widthInput" placeholder="Width" min="1" />
             </label>
-            <label class="field-label">
-              Height (px)
+            <label class="field-label">Height (px)
               <input type="number" id="heightInput" placeholder="Height" min="1" />
             </label>
           </div>
@@ -98,7 +99,7 @@
           </label>
 
           <div class="field-group">
-            <label class="field-label">Output Format</label>
+            <label class="field-label" for="formatSelect">Output Format</label>
             <select id="formatSelect">
               <option value="image/jpeg">JPG / JPEG</option>
               <option value="image/png">PNG</option>
@@ -112,14 +113,13 @@
           </div>
 
           <div class="action-row">
-            <button id="downloadBtn" class="secondary">Download Image</button>
+            <button id="downloadBtn">Download Image</button>
             <button id="resetBtn" class="secondary">Choose another file</button>
           </div>
 
           <p id="statusMsg" class="status-msg"></p>
         </div>
 
-        <!-- Live Preview Column -->
         <div class="preview-panel">
           <span class="preview-title">Live Preview</span>
           <div class="img-preview-container">

@@ -22,34 +22,38 @@
   <a href="/index.html" class="back-home">← Back to ToolGrid</a>
 
   <main class="tool-container">
-    <h1>Image compressor</h1>
-    <p>Compress and resize images right in your browser. Nothing is uploaded anywhere.</p>
+    <header class="tool-hero">
+      <div class="tool-icon">IMG</div>
+      <h1>Image compressor</h1>
+      <p>Compress and resize images right in your browser. Nothing is uploaded anywhere.</p>
+    </header>
 
-<details class="how-to-use">
-  <summary>How to use this tool</summary>
-  <div class="how-to-use-content">
-    Drag and drop an image or click to select one. Adjust quality, max width, and format, then download the compressed result.
-  </div>
-</details>
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Drag and drop an image or click to select one. Adjust quality, max width, and format, then download the compressed result.
+      </div>
+    </details>
 
     <div id="dropZone" class="drop-zone">
-      <p>Drag & drop an image here, or click to select</p>
+      <div class="drop-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </div>
+      <p class="drop-title">Drag & drop an image here</p>
+      <span class="drop-hint">or click to browse — JPG, PNG, WebP supported</span>
       <input type="file" id="fileInput" accept="image/*" hidden />
     </div>
 
     <div id="editorArea" class="editor-area" style="display:none;">
-
       <div class="options-row">
         <div class="option">
           <label for="qualityRange">Quality: <span id="qualityValue">80</span>%</label>
           <input type="range" id="qualityRange" min="10" max="100" value="80" />
         </div>
-
         <div class="option">
           <label for="widthInput">Max width (px)</label>
           <input type="number" id="widthInput" placeholder="Original" />
         </div>
-
         <div class="option">
           <label for="formatSelect">Format</label>
           <select id="formatSelect">
@@ -66,7 +70,7 @@
           <img id="originalPreview" />
           <p id="originalSize" class="size-label"></p>
         </div>
-        <div class="compare-box">
+        <div class="compare-box compressed">
           <p class="compare-label">Compressed</p>
           <img id="compressedPreview" />
           <p id="compressedSize" class="size-label"></p>

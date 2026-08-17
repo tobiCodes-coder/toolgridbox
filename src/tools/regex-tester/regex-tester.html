@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Regex Tester | Real-time Regular Expression Matcher</title>
+  <meta name="description" content="Test regular expressions with real-time matching, capture groups, flags, and presets. Highlight matches, see explanations, and copy patterns. Free, no signup." />
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="./regex-tester.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toolgridbox.pages.dev/src/tools/regex-tester/regex-tester.html" />
+  <meta property="og:title" content="Free Regex Tester | Real-time Regular Expression Matcher" />
+  <meta property="og:description" content="Test regex patterns with real-time matching, capture groups, and presets. Free, no signup." />
+  <meta property="og:image" content="https://toolgridbox.pages.dev/assets/og-image.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://toolgridbox.pages.dev/src/tools/regex-tester/regex-tester.html" />
+</head>
+<body>
+  <a href="/index.html" class="back-home">← Back to ToolGrid</a>
+
+  <main class="tool-container">
+    <header class="tool-hero">
+      <div class="tool-icon">RGX</div>
+      <h1>Regex tester</h1>
+      <p>Test regular expressions with real-time matching and highlights.</p>
+    </header>
+
+    <details class="how-to-use">
+      <summary>How to use this tool</summary>
+      <div class="how-to-use-content">
+        Enter your regex pattern and test string. Use flags to modify behavior. Matches will be highlighted in real-time. View capture groups, test replacements, or choose from common preset patterns.
+      </div>
+    </details>
+
+    <div class="regex-input-row">
+      <div class="regex-field">
+        <span class="slash">/</span>
+        <input type="text" id="regexInput" placeholder="[a-z]+" value="\b\w+@\w+\.\w+\b" autocomplete="off" spellcheck="false" />
+        <span class="slash">/</span>
+        <input type="text" id="flagsInput" placeholder="flags" value="gi" maxlength="6" autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="regex-actions">
+        <button id="copyRegexBtn" class="mini-btn">Copy</button>
+        <button id="saveBtn" class="mini-btn">Save</button>
+      </div>
+    </div>
+
+    <div class="flag-chips">
+      <label class="chip"><input type="checkbox" data-flag="g" checked /> Global (g)</label>
+      <label class="chip"><input type="checkbox" data-flag="i" checked /> Case insensitive (i)</label>
+      <label class="chip"><input type="checkbox" data-flag="m" /> Multiline (m)</label>
+      <label class="chip"><input type="checkbox" data-flag="s" /> Dotall (s)</label>
+      <label class="chip"><input type="checkbox" data-flag="u" /> Unicode (u)</label>
+      <label class="chip"><input type="checkbox" data-flag="y" /> Sticky (y)</label>
+    </div>
+
+    <div class="presets-row">
+      <select id="presetSelect">
+        <option value="">— Common patterns —</option>
+        <option value='[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|g'>Email</option>
+        <option value="https?:\/\/[^\s]+|gi">URL</option>
+        <option value='\b\d{1,3}(\.\d{1,3}){3}\b|g'>IPv4 address</option>
+        <option value='\b\d{4}[- ]?\d{4}[- ]?\d{4}[- ]?\d{4}\b|g'>Credit card</option>
+        <option value='\+\d{1,3}[- ]?\(?\d{2,3}\)?[- ]?\d{3,4}[- ]?\d{3,4}|g'>Phone number</option>
+        <option value='^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$|m'>Email (strict)</option>
+        <option value='[A-Fa-f0-9]{6}|g'>Hex color (6)</option>
+        <option value='[A-Fa-f0-9]{3}|g'>Hex color (3)</option>
+        <option value='<[^>]+>|g'>HTML tags</option>
+        <option value='\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])|g'>ISO date</option>
+      </select>
+      <button id="explainBtn" class="mini-btn">Explain regex</button>
+    </div>
+
+    <div class="editor-grid">
+      <div class="pane">
+        <div class="pane-head">
+          <span class="pane-title">Test string</span>
+          <button id="clearTextBtn" class="mini-btn">Clear</button>
+        </div>
+        <textarea id="testText" placeholder="Paste your text here to test...">Send your feedback to support@toolgrid.com or visit https://toolgridbox.pages.dev. Call us at +1 (555) 123-4567. Our IP is 192.168.1.1. Use color #185fa5 for the logo.</textarea>
+      </div>
+      <div class="pane">
+        <div class="pane-head">
+          <span class="pane-title">Highlighted matches</span>
+          <span class="match-count" id="matchCount">0 matches</span>
+        </div>
+        <div id="highlightedOutput" class="highlighted"></div>
+      </div>
+    </div>
+
+    <div class="groups-card">
+      <div class="pane-head">
+        <span class="pane-title">Matches & Capture groups</span>
+        <button id="exportBtn" class="mini-btn">Export JSON</button>
+      </div>
+      <div id="matchesList" class="matches-list"></div>
+    </div>
+
+    <div class="replace-card">
+      <div class="pane-head"><span class="pane-title">Replace</span></div>
+      <div class="replace-row">
+        <input type="text" id="replaceInput" placeholder="Replacement text (use $1, $2 for groups)" />
+        <button id="replaceBtn" class="btn-secondary">Replace all</button>
+        <button id="copyResultBtn" class="mini-btn">Copy result</button>
+      </div>
+      <textarea id="replaceOutput" readonly placeholder="Replaced text will appear here..."></textarea>
+    </div>
+
+    <div class="saved-card" id="savedCard" style="display:none;">
+      <div class="pane-head">
+        <span class="pane-title">Saved patterns</span>
+        <button id="clearSavedBtn" class="mini-btn">Clear all</button>
+      </div>
+      <div id="savedList" class="saved-list"></div>
+    </div>
+
+    <p id="statusMsg" class="status-msg"></p>
+  </main>
+
+  <script type="module" src="./regex-tester.js"></script>
+  <script type="module" src="/src/js/back-nav.js"></script>
+</body>
+</html>

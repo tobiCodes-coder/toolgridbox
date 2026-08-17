@@ -32,5 +32,6 @@ export const tools = [
     { name: 'Password generator', desc: 'Create strong, secure random passwords and passphrases', icon: 'PWD', url: '/src/tools/password-generator/password-generator.html', category: 'Developer' },
     { name: 'Markdown ↔ HTML converter', desc: 'Convert Markdown to HTML and back with live preview', icon: 'MD', url: '/src/tools/markdown-html/markdown-html.html', category: 'Developer' },
     { name: 'CSS & JS minifier', desc: 'Minify or beautify CSS and JavaScript code', icon: 'MIN', url: '/src/tools/minifier/minifier.html', category: 'Developer' },
+    { name: 'Regex tester', desc: 'Test regular expressions with live matching and capture groups', icon: 'RGX', url: '/src/tools/regex-tester/regex-tester.html', category: 'Developer' },
     
 ];

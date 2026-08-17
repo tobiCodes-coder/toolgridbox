@@ -208,4 +208,111 @@
 .compare-box {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-box.compressed {
+  border-color: var(--color-primary-border);
+}
+
+.compare-label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-text-2);
+  background: var(--color-bg-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.compare-box.compressed .compare-label {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.compare-box img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  margin-bottom: 10px;
+}
+
+.size-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-2);
+  text-align: center;
+}
+
+/* ===== Actions ===== */
+.action-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-row button {
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-md);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--t-base);
+}
+
+.action-row button#downloadBtn {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-primary);
+}
+
+.action-row button#downloadBtn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.action-row button.secondary {
+  background: var(--color-bg);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border);
+}
+
+.action-row button.secondary:hover {
+  background: var(--color-primary-soft);
+}
+
+.status-msg {
+  text-align: center;
+  margin-top: 16px;
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+  min-height: 20px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  .tool-container {
+    padding: 28px 16px 60px;
+  }
+  .tool-hero h1 {
+    font-size: 28px;
+  }
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+  .action-row {
+    flex-direction: column;
+  }
+  .action-row button {
+    width: 100%;
+  }
+}
